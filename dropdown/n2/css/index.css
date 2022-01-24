@@ -1,0 +1,124 @@
+.group-box {
+    width:100%;
+    max-height:84%;
+    min-height:74%;
+    height:74%;
+}
+.group-box > .tit {
+    display:flex;    
+    align-items:center;
+    height:10%;
+    width:calc(100% - 4em);      
+    margin:auto;
+}
+.group-box .tit .txt {  
+    display:flex;
+    align-items:center;  
+    color: #FFFFFF;
+    font-size: 1.6em;
+    font-family: 'NotoSansCJKkr-Medium';
+    padding-right:1.2em;
+    
+}
+.group-box .tit .num {
+    border: 1px solid #E6206F;
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-size: 1.4em;
+    color: #E6206F;
+    padding:3px 1.2em 2px;
+}
+.group-box .scroll-wrap {
+    width: calc(100% - 0.8em);
+    height:90%;
+    overflow-y:auto;
+}
+.group-box .scroll-wrap .ul-group {
+    width:100%;
+    height:100%;
+}
+.group-box .scroll-wrap .ul-group > li {
+    width: calc(100% - 3.2em);
+    margin-left: 2em;
+    margin-right: 1.2em;
+    margin-bottom: 1em;
+}
+.group-box .scroll-wrap .ul-group > li .tit_n01 {
+    display:flex;
+    align-items:center;
+    height:2em;
+}
+.group-box .scroll-wrap .ul-group > li .tit_n01 .icon {
+    width:1.6em;
+    height:1.6em;
+    background:url('../img/btn_pm/plus.png') center no-repeat;
+    background-size:100%;
+    transition:0.3s;
+}
+.group-box .scroll-wrap .ul-group > li.on .tit_n01 .icon {
+    width:1.6em;
+    height:1.6em;
+    background:url('../img/btn_pm/minor.png') center no-repeat;
+    background-size:100%;
+}
+.group-box .scroll-wrap .ul-group > li .tit_n01 .txt {
+    padding-left:1em;  
+    padding-right:0.6em;
+    color: #FFFFFF; 
+    font-size: 1.4em;
+    font-family: 'NotoSansCJKkr-Medium';
+}
+.group-box .scroll-wrap .ul-group > li .tit_n01 .num {
+    display:flex;
+    align-items:center;
+    border: 1px solid #E6206F;
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-size: 1.4em;
+    color: #E6206F;
+    padding: 0 1.2em ;
+    height:100%;
+}
+.group-box .scroll-wrap .ul-group > li.on .sub-tit {
+    padding:1em 0 0em;
+    height:auto;
+}
+.group-box .scroll-wrap .ul-group > li .sub-tit {
+    
+    height:0;
+    overflow:hidden;
+    transition:0.3s;    
+}
+.group-box .scroll-wrap .ul-group > li .sub-tit > li {
+    display:flex;    
+    height:3em;
+}
+.group-box .scroll-wrap .ul-group > li .sub-tit > li > a {
+    display:flex;
+    align-items:center;
+    width:100%;
+    height:100%;
+    background: transparent;
+    border: 1px solid transparent;
+    transition:0.3s;
+}
+.group-box .scroll-wrap .ul-group > li .sub-tit > li:hover > a ,
+.group-box .scroll-wrap .ul-group > li .sub-tit > li.on > a {
+    display:flex;
+    align-items:center;
+    width:100%;
+    height:100%;
+    background: rgba(45, 86, 247, 0.5);
+    border: 1px solid #2D56F7;
+}
+.group-box .scroll-wrap .ul-group > li .sub-tit > li > a .icon {
+    margin:0 1.3em 0 0.8em;
+    width:1em;
+    height:0.9em;
+    background:url('../img/deco.png') center no-repeat;
+    background-size:100%;
+} 
+.group-box .scroll-wrap .ul-group > li .sub-tit > li > a .txt {
+    color: #FFFFFF;
+    font-size: 1.4em;
+}
