@@ -77,7 +77,33 @@ window.addEventListener('load',function(){
         element.addEventListener('click',closePopup);        
     });
 
+    /*스와이프 */
+    let innerSlider = document.querySelector(".notice-list")
+    let beforeScreenX , screenX ;
     
+    innerSlider.addEventListener("touchstart", e => {       
+
+    beforeScreenX = e.changedTouches[0].screenX;    
+
+    })
+    
+    innerSlider.addEventListener("touchmove", (e) => {
+        
+    })
+
+    innerSlider.addEventListener("touchend", (e) => {
+        screenX = e.changedTouches[0].screenX;
+        moveSwiper(screenX , beforeScreenX);
+    });
+
+    const moveSwiper = (screenX , beforeScreenX) => {
+
+        if(screenX < beforeScreenX){
+            noticeNext();
+        }else {
+            noticePrev();
+        }
+    }
     
 });
 
@@ -242,8 +268,7 @@ const sliderIndexEvent = (e , index) => {
     }
 
 }
-const sliderDotEvent = (e ,index) => {
-    e.preventDefault();    
+const sliderDotEvent = (index) => {  
     
     let count = index;
     let dotWrap = document.querySelector('.dot-wrap');        
@@ -263,8 +288,8 @@ const sliderDotEvent = (e ,index) => {
 
 /*공지사항 prev */
 
-const noticePrev = (e) => {
-    e.preventDefault();    
+const noticePrev = () => {
+       
 
     let ppNoticeWidth = document.querySelector('.popup.notice').clientWidth;
     let bodyWidth = ppNoticeWidth - '2';
@@ -285,7 +310,7 @@ const noticePrev = (e) => {
 
 
     
-    count--;
+    count--;    
 
     if(count == 0){
         prev.classList.remove('on');
@@ -303,7 +328,7 @@ const noticePrev = (e) => {
         next.classList.add('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
         noticeList.setAttribute('index',count);  
-        sliderDotEvent(e,count);       
+        sliderDotEvent(count);       
     }  
 
     
@@ -314,8 +339,8 @@ const noticePrev = (e) => {
 /*공지사항 next */
 
 
-const noticeNext = (e) => {
-    e.preventDefault();    
+const noticeNext = () => {
+      
 
     let ppNoticeWidth = document.querySelector('.popup.notice').clientWidth;
     let bodyWidth = ppNoticeWidth - '2';
@@ -336,6 +361,8 @@ const noticeNext = (e) => {
 
     
     count++;
+    console.log('next',count);
+    
 
     if(count == length-1){
         next.classList.remove('on');
@@ -354,7 +381,7 @@ const noticeNext = (e) => {
         prev.classList.add('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
         noticeList.setAttribute('index',count);          
-        sliderDotEvent(e,count);
+        sliderDotEvent(count);
     }      
     
 }
@@ -493,6 +520,7 @@ const dimRemove = (e) => {
 
     dim.classList.remove('on');
 }
+
 
 
 

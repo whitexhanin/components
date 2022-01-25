@@ -253,29 +253,30 @@
     display:flex;  
   
   }
-  .popup.notice .body .page .arrow > a {
+  .popup.notice .body .page .arrow > span {
     display:block;  
     width:1em;
     height:1.7em;
     transition:0.3s;
+    cursor: pointer;
   
   }
-  .popup.notice .body .page .arrow > a.prev {
+  .popup.notice .body .page .arrow > span.prev {
     margin-right:1em;
     background:url('../img/btn_arrow/icon_off.png') center no-repeat;
     background-size:100%;  
   }
-  .popup.notice .body .page .arrow > a.prev.on {  
+  .popup.notice .body .page .arrow > span.prev.on {  
     background:url('../img/btn_arrow/icon_on.png') center no-repeat;
     background-size:100%;  
   }
-  .popup.notice .body .page .arrow > a.next {
+  .popup.notice .body .page .arrow > span.next {
     background:url('../img/btn_arrow/icon_off.png') center no-repeat;
     background-size:100%;
     transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
   }
-  .popup.notice .body .page .arrow > a.next.on {
+  .popup.notice .body .page .arrow > span.next.on {
     background:url('../img/btn_arrow/icon_on.png') center no-repeat;
     background-size:100%;
     transform:rotate(180deg);
