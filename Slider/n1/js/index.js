@@ -18,7 +18,7 @@ window.addEventListener('load',function(){
         /* 공지사항 리스트 갯수 체크*/
         noticelist(); 
 
-        /* 공지사항 리스트 갯수 만큼 점 추가*/
+        /*  *공지사항 리스트 갯수 만큼 점 추가**/
         pageDotadd();   
         
         /* 공지사항 리스트 Width값 추가*/
@@ -31,14 +31,13 @@ window.addEventListener('load',function(){
         element.addEventListener('click',popupOpen);
     });   
 
-    /*점 클릭 시  */
+    /**점 클릭 시  **/
     dot = dotwrap.querySelectorAll('a');
     dot.forEach(element => {    
         element.addEventListener('click',pageDot);
     });      
 
-    /*점 클릭 시  */
-
+    
 
     /*공지사항 prev ,next */
     let prev = document.querySelector('.popup.notice .arrow .prev');
@@ -49,6 +48,9 @@ window.addEventListener('load',function(){
 
     next.addEventListener('click',noticeNext);
 
+    /*공지사항 롤링 */
+
+    startTimer();   
 
 
     /*헤더 공지사항 arrow버튼 */
@@ -95,17 +97,18 @@ window.addEventListener('load',function(){
         screenX = e.changedTouches[0].screenX;
         moveSwiper(screenX , beforeScreenX);
     });
-
-    const moveSwiper = (screenX , beforeScreenX) => {
-
-        if(screenX < beforeScreenX){
-            noticeNext();
-        }else {
-            noticePrev();
-        }
-    }
     
 });
+
+//공지사항 스와이프
+const moveSwiper = (screenX , beforeScreenX) => {
+
+    if(screenX < beforeScreenX){
+        noticeNext();
+    }else {
+        noticePrev();
+    }
+}
 
 //헤더 공지사항 리스트 갯수 체크
 const noticeHeaderlist = (e) => {
@@ -253,19 +256,31 @@ const sliderIndexEvent = (e , index) => {
     let next = document.querySelector('.popup.notice .arrow .next');
 
 
+    // if(count == 0){
+    //     prev.classList.remove('on');
+    // }else if(count <= 3 && count > 0) {
+    //     prev.classList.add('on');
+    //     noticeList.setAttribute('index',count);  
+    // }
+
+    // if(count == length-1){
+    //     next.classList.remove('on');
+    // }else if(count <= 3 && count >= 0) {
+    //     next.classList.add('on');
+    //     noticeList.setAttribute('index',count);  
+    // }
+
     if(count == 0){
-        prev.classList.remove('on');
-    }else if(count <= 3 && count > 0) {
-        prev.classList.add('on');
+    }else if(count <= length && count > 0) {
         noticeList.setAttribute('index',count);  
     }
 
-    if(count == length-1){
-        next.classList.remove('on');
-    }else if(count <= 3 && count >= 0) {
-        next.classList.add('on');
+    if(count == length){
+    }else if(count <= length && count >= 0) {
         noticeList.setAttribute('index',count);  
     }
+
+    pageIdk(e , index);
 
 }
 const sliderDotEvent = (index) => {  
@@ -308,6 +323,9 @@ const noticePrev = () => {
     let dot = dotWrap.querySelectorAll('a');  
     let dot0 = dotWrap.querySelector('.dot0');  
 
+    let pageNum = document.querySelector('.page_num');
+    let pageCrt = pageNum.querySelector('.current');
+
 
     
     count--;    
@@ -316,6 +334,7 @@ const noticePrev = () => {
         prev.classList.remove('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
         noticeList.setAttribute('index',count); 
+        pageCrt.innerHTML = Number(count) + 1; 
         
         dot.forEach(element => {    
             element.classList.remove('on');
@@ -323,11 +342,13 @@ const noticePrev = () => {
     
         dot0.classList.add('on');
 
-    }else if(count <= 2 && count > 0) {
+    }else if(count <= length-1 && count > 0) {
         prev.classList.add('on');
         next.classList.add('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
         noticeList.setAttribute('index',count);  
+        pageCrt.innerHTML = Number(count) + 1; 
+        
         sliderDotEvent(count);       
     }  
 
@@ -358,6 +379,9 @@ const noticeNext = () => {
     let dot = dotWrap.querySelectorAll('a');  
     let dot0 = dotWrap.querySelector('.dot'+count);  
 
+    let pageNum = document.querySelector('.page_num');
+    let pageCrt = pageNum.querySelector('.current');
+
 
     
     count++;
@@ -368,6 +392,7 @@ const noticeNext = () => {
         next.classList.remove('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
         noticeList.setAttribute('index',count);  
+        pageCrt.innerHTML = Number(count) + 1;  
 
         dot.forEach(element => {    
             element.classList.remove('on');
@@ -380,48 +405,159 @@ const noticeNext = () => {
         next.classList.add('on');
         prev.classList.add('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
-        noticeList.setAttribute('index',count);          
+        noticeList.setAttribute('index',count);      
+        pageCrt.innerHTML = Number(count) + 1;       
         sliderDotEvent(count);
     }      
     
 }
 
+//공지사항 페이지 인디케이터
+const pageIdk = (e , index) => {
+    let count = index;
+    let noticeWrapUl = document.querySelector('.notice-wrap .rolling > .inner');
+    let child =  noticeWrapUl.childElementCount;
+    let noticeList = document.querySelector('.popup.notice .notice-list');    
+    let length = noticeList.childElementCount;
+    let pageNum = document.querySelector('.page_num');
+    let pageCrt = pageNum.querySelector('.current');
+    let pageTt = pageNum.querySelector('.total');
+    let page = document.querySelector('.page');
+
+    if(child > 1){   
+        page.classList.replace('off','on');
+        noticeList.classList.remove('full');
+        pageCrt.innerHTML = Number(count) + 1;
+        pageTt.innerHTML = length;
+    }else {
+        page.classList.replace('on','off');
+        noticeList.classList.add('full');
+    }
+
+}
+
+
 //공지사항 롤링
 
-let j = 0; 
+let isPause = false;
+let timerId;
+let first = false;
 
-const rolling = (i) => {
+
+
+const startTimer = () => {
+    
+    isPause = false;
+    timerId = setInterval(rolling , 5000);
+}
+
+const stopTimer = () => {
+    clearInterval(timerId);
+    isPause = true;
+}
+
+
+
+const rolling = () => {
 
     let noticeWrap = document.querySelector('.notice-wrap');
     let noticeWrapUl = noticeWrap.querySelector('.rolling > .inner');
     let noticeWrapLi = noticeWrapUl.querySelector('li:first-child');
-    
-    noticeWrapLi = noticeWrapUl.querySelector('li:first-child');   
-    noticeWrapUl.append(noticeWrapLi);
-           
+
+
+    if(!isPause){
+
+        noticeWrapUl.animate([                                       
+            {transform:'translateY(-0px)'},
+            {transform:'translateY(-10px)'}
+            
+        ],{
+            duration:500
+        });
+        noticeWrapUl.append(noticeWrapLi.cloneNode(true));
+
+
+        setTimeout(function(){            
+            noticeWrapLi.remove();  
+
+            noticeWrapUl.animate([                                       
+                {transform:'translateY(10px)'},
+                {transform:'translateY(0px)'}                
+            ],{
+                duration:200
+            });
+            noticeWrapUl.style.transform = 'translateY(-0px)'; 
+        },500)}
+         
 }
 
 /*헤더 공지사항 버튼*/
 const upEvent = (e) => {
     e.preventDefault();
+    
+
     let noticeWrap = document.querySelector('.notice-wrap');
     let noticeWrapUl = noticeWrap.querySelector('.rolling > .inner');
-    let noticeWrapLi = noticeWrapUl.querySelector('li:first-child');
+    let noticeWrapLi_last = noticeWrapUl.querySelector('li:last-child');   
 
-    noticeWrapLi = noticeWrapUl.querySelector('li:last-child');   
-    noticeWrapUl.prepend(noticeWrapLi);
+    noticeWrapUl.animate([                                       
+        {transform:'translateY(-22px)'}    ,   
+        {transform:'translateY(-0px)'}   
+    ],{
+        duration:500
+    });
+
+    noticeWrapUl.prepend(noticeWrapLi_last.cloneNode(true));
+    noticeWrapLi_last.remove();
+    noticeWrapUl.style.transform = 'translateY(-0px)'; 
+
+    stopTimer();
+    startTimer();
 
 }
 
+
+
+
+
+
 const downEvent = (e) => {
     e.preventDefault();
+
+    
     let noticeWrap = document.querySelector('.notice-wrap');
     let noticeWrapUl = noticeWrap.querySelector('.rolling > .inner');
-    let noticeWrapLi = noticeWrapUl.querySelector('li:first-child');
+    let noticeWrapLi_first = noticeWrapUl.querySelector('li:first-child');
+    let rectY = Math.floor(noticeWrapUl.getBoundingClientRect().top);
 
-    noticeWrapLi = noticeWrapUl.querySelector('li:first-child');   
-    noticeWrapUl.append(noticeWrapLi);
     
+    stopTimer();        
+    
+    if(rectY >= 20){
+        noticeWrapUl.animate([                                       
+        {transform:'translateY(-0px)'},   
+        {transform:'translateY(-10px)'}   
+    ],{
+        duration:500
+    });
+
+    noticeWrapUl.append(noticeWrapLi_first.cloneNode(true));
+
+    setTimeout(function(){            
+        noticeWrapLi_first.remove();  
+
+        noticeWrapUl.animate([                                       
+            {transform:'translateY(10px)'},
+            {transform:'translateY(0px)'}                
+        ],{
+            duration:200
+        });
+
+        noticeWrapUl.style.transform = 'translateY(-0px)'; 
+    },500)}
+
+    startTimer();
+
 }
 
 
