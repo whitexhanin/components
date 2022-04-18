@@ -21,6 +21,7 @@
   .notice-wrap .rolling {
     height:2.4em;
     overflow:hidden;
+    font-size: 1vh;
   }
   .notice-wrap .rolling > .inner {
     margin-left:1.5em;
@@ -270,21 +271,21 @@
   
   }
   .popup.notice .body .page .arrow > a.prev {  
-    background:url('../../img/icon/btn_arrow/icon_off.png') center no-repeat;
+    background:url('../img/btn_arrow/icon_off.png') center no-repeat;
     background-size:100%;  
   }
   .popup.notice .body .page .arrow > a.prev:hover {  
-    background:url('../../img/icon/btn_arrow/icon_on.png') center no-repeat;
+    background:url('../img/btn_arrow/icon_on.png') center no-repeat;
     background-size:100%;  
   }
   .popup.notice .body .page .arrow > a.next {
-    background:url('../../img/icon/btn_arrow/icon_off.png') center no-repeat;
+    background:url('../img/btn_arrow/icon_off.png') center no-repeat;
     background-size:100%;
     transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
   }
   .popup.notice .body .page .arrow > a.next:hover {
-    background:url('../../img/icon/btn_arrow/icon_on.png') center no-repeat;
+    background:url('../img/btn_arrow/icon_on.png') center no-repeat;
     background-size:100%;
     transform:rotate(180deg);
     -webkit-transform:rotate(180deg);
@@ -315,7 +316,7 @@
   .badge.urgent {
     background: #FF3124;
   }
-  
+
 
   .dim {
     display:block;

@@ -256,20 +256,6 @@ const sliderIndexEvent = (e , index) => {
     let next = document.querySelector('.popup.notice .arrow .next');
 
 
-    // if(count == 0){
-    //     prev.classList.remove('on');
-    // }else if(count <= 3 && count > 0) {
-    //     prev.classList.add('on');
-    //     noticeList.setAttribute('index',count);  
-    // }
-
-    // if(count == length-1){
-    //     next.classList.remove('on');
-    // }else if(count <= 3 && count >= 0) {
-    //     next.classList.add('on');
-    //     noticeList.setAttribute('index',count);  
-    // }
-
     if(count == 0){
     }else if(count <= length && count > 0) {
         noticeList.setAttribute('index',count);  
@@ -303,20 +289,20 @@ const sliderDotEvent = (index) => {
 
 /*공지사항 prev */
 
-const noticePrev = () => {
+const noticePrev = (e) => {
+    e.preventDefault();   
        
 
     let ppNoticeWidth = document.querySelector('.popup.notice').clientWidth;
     let bodyWidth = ppNoticeWidth - '2';
 
     let noticeList = document.querySelector('.popup.notice .notice-list');
+    let length = noticeList.childElementCount;
     let tIndex = noticeList.attributes.index.value;
     let count = tIndex;
 
     let prev = document.querySelector('.popup.notice .arrow .prev');
     let next = document.querySelector('.popup.notice .arrow .next');
-
-     
     
 
     let dotWrap = document.querySelector('.dot-wrap');        
@@ -350,8 +336,7 @@ const noticePrev = () => {
         pageCrt.innerHTML = Number(count) + 1; 
         
         sliderDotEvent(count);       
-    }  
-
+    }    
     
     
     
@@ -360,7 +345,9 @@ const noticePrev = () => {
 /*공지사항 next */
 
 
-const noticeNext = () => {
+
+const noticeNext = (e) => {
+    e.preventDefault();   
       
 
     let ppNoticeWidth = document.querySelector('.popup.notice').clientWidth;
@@ -385,7 +372,7 @@ const noticeNext = () => {
 
     
     count++;
-    console.log('next',count);
+    // console.log('next',count);
     
 
     if(count == length-1){
@@ -401,7 +388,7 @@ const noticeNext = () => {
         dot0 = dotWrap.querySelector('.dot'+count);  
         dot0.classList.add('on');
 
-    }else if(count <= 2 && count >= 0) {
+    }else if(count <= length-1 && count >= 0) {
         next.classList.add('on');
         prev.classList.add('on');
         noticeList.style.transform = 'translateX('+ ('-'+bodyWidth * count) + 'px)';
@@ -501,7 +488,7 @@ const upEvent = (e) => {
     let noticeWrapLi_last = noticeWrapUl.querySelector('li:last-child');   
 
     noticeWrapUl.animate([                                       
-        {transform:'translateY(-22px)'}    ,   
+        {transform:'translateY(-24px)'}    ,   
         {transform:'translateY(-0px)'}   
     ],{
         duration:500
