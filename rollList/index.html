@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 현재 심사대 현황 -->
+    <section class="now-imm">  
+        <div class="tit-area"></div>
+        <div class="rolling">                  
+            <ul class="listck">                
+                <!-- 공항일때 airport : ap-->
+                <!-- 경보상황일때 wrn 클래스 추가 -->
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">김포공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <!-- 항일때 harbor:hb-->
+                <!-- 경보상황일때 wrn 클래스 추가 -->
+                <li class="hb">
+                    <span class="i"></span>
+                    <span class="tit">인천공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="hb wrn">
+                    <span class="i"></span>
+                    <span class="tit">인천항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">2</span>
+                </li>
+                <li class="hb">
+                    <span class="i"></span>
+                    <span class="tit">평택항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="hb">
+                    <span class="i"></span>
+                    <span class="tit">군산항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">무안공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">제주공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">대구공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">김해공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>   
+                <li class="ap">
+                    <span class="i"></span>
+                    <span class="tit">양양공항</span>
+                    <span class="i-wrn"></span>
+                    <span class="wrn-txt">경보</span>
+                    <span class="wrn-val">-</span>
+                </li>                                                              
+            </ul>
+        </div>
+    </section>
+<script>
+    window.addEventListener('load',function(){    
+
+    let rolling = document.querySelector('.rolling > ul.listck');
+    let rollId;
+
+        if(rolling.childElementCount > 9){                
+            /*현재심사대 롤링 */
+                startTimer();   
+        }        
+
+    });
+
+    //현재심사대 롤링
+
+    let isPause = false;
+    let timerId;
+    let first = false;
+
+    const startTimer = () => {
+
+        isPause = false;    
+        let noticeWrapUl = document.querySelector('.rolling > ul.listck');  
+        let h1;       
+        h1 = '-116px';
+
+        setTimeout(function(){           
+
+            noticeWrapUl.animate([                                       
+                {transform:'translateY(-0rem)'},
+                {transform:'translateY('+h1+')'}                
+            ],{
+                duration:500
+            });
+            noticeWrapUl.style.transform = 'translateY('+h1+')';         
+        },5000);
+
+        setTimeout(function(){           
+            timerId = setInterval(rolling , 5000);
+        },5000)
+
+        
+        
+    }
+
+    const stopTimer = () => {
+
+        let noticeWrapUl = document.querySelector('.rolling > ul.listck');          
+
+        let h1;       
+        h1 = '-116px';
+
+        noticeWrapUl.style.transform = 'translateY('+h1+')'; 
+        clearInterval(timerId);
+        isPause = true;
+    }
+
+
+    const rolling = () => {
+
+        
+        let noticeWrapUl = document.querySelector('.rolling > ul.listck');
+        let noticeWrapLi = noticeWrapUl.querySelector('li:nth-child(1)');            
+        let h1;       
+        h1 = '-116px';
+
+        if(!isPause){
+            
+            setTimeout(function(){  
+                
+                noticeWrapUl.animate([                                       
+                    {transform:'translateY(-0px)'},
+                    {transform:'translateY('+h1+')'}
+                    
+                ],{
+                    duration:500
+                });
+                    noticeWrapUl.style.transform = 'translateY('+h1+')'; 
+                    noticeWrapUl.append(noticeWrapLi.cloneNode(true));   
+                    noticeWrapLi.remove();  
+            },500)        
+            
+        }
+            
+        
+    }
+</script>
+</body>
+</html>

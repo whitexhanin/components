@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글:스위치 토글,메뉴 탭 토글,사이드 메뉴 토글</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 스위치 토글 -->
+    <button class="switch01"></button>
+
+    <!--메뉴 토글 -->
+    <div class="btn-switch">
+        <button class="event left0 on">                        
+            <span class="tit">최근 이벤트</span>
+            <span class="count">20</span>
+        </button>
+        <button class="imm left100">
+            <span class="tit">심사대</span>
+            <span class="count">25</span>
+        </button>
+    </div>
+
+    <!-- 사이드 메뉴 토글-->
+    <div class="info-poi-area">
+        <button class="btn_open"></button>
+        <div class="info-box">
+            <div class="btn-switch">
+                <button class="event left0 on">                        
+                    <span class="tit">최근 이벤트</span>
+                    <span class="count">20</span>
+                </button>
+                <button class="imm left100">
+                    <span class="tit">심사대</span>
+                    <span class="count">25</span>
+                </button>
+            </div>
+            <div class="box-wrap">
+                <div class="event">
+                    <ul class="scroll list listck">   
+                        리스트 (1)                
+                    </ul>
+                </div>
+                <div class="imm">                    
+                    <div class="">
+                        <ul>       
+                            리스트 (2)                                  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+
+    window.addEventListener('load',function(){
+        // 스위치 토글
+        let switch01 = document.querySelectorAll('.switch01');
+        switch01.forEach(element => {
+            element.addEventListener('pointerdown',switch01Event);
+        });
+
+        // 메뉴 토글
+        let btnSwitch = document.querySelectorAll('.btn-switch button');
+    
+        btnSwitch.forEach(element => {
+            element.addEventListener('pointerdown',btnSwitchEvent);
+        });
+
+        //사이드 메뉴 오픈 버튼
+        let btnOpen = document.querySelector('.btn_open');
+        btnOpen.addEventListener('pointerdown',sideMenuOpen);
+    })
+
+    // 스위치 토글
+    const switch01Event = (e) => {
+        let target = e.currentTarget;
+        target.classList.toggle('on');
+    }
+
+    // 메뉴 토글
+    const btnSwitchEvent = (e) => {
+        let target = e.currentTarget;
+        let btnWrap = target.closest('.btn-switch');  
+        let boxWrap = document.querySelector('.box-wrap');
+        let btnOn = btnWrap.querySelector('button.on');
+
+        if(!target.classList.contains('on')){
+            btnOn.classList.remove('on');
+            target.classList.add('on');
+
+            if(target.classList.contains('left100')){
+                btnWrap.setAttribute('class','btn-switch left100');
+                boxWrap.classList.add('on');
+            }else {
+                btnWrap.setAttribute('class','btn-switch');
+                boxWrap.classList.remove('on');
+            }
+
+        }
+    }
+
+    //사이드 메뉴 오픈 버튼
+    const sideMenuOpen = (e) => {
+        let target = e.currentTarget;
+        let infoBox = document.querySelector('.info-box');
+
+        target.classList.toggle('on');
+        infoBox.classList.toggle('on');
+    }
+    
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,86 @@
+.now-imm {
+    height: 945px;
+    .tit-area {
+        height:45px;
+    }
+
+    .rolling {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 900px;
+        margin-top: 0.46rem;
+      }
+      ul {
+        position: absolute;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.46rem;
+        width: 500px;
+        height: 600px;
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-right: 27px;
+            flex: none;
+            z-index: 0;
+            background: rgba(25, 47, 101, 0.8);
+            border: 1px solid #2C4AA8;
+            cursor: pointer;
+            > div {
+                width: 100%;
+                height: 100%;
+              }
+            .i {
+                width: 3.3rem;
+                height: 3.3rem;
+                border-radius: 50vh;
+            }
+            .tit {
+                font-size: 2.2rem;
+                padding-left: 16px;
+                margin-right: auto;
+                color: #ffffff;
+            }
+            .i-wrn {
+                width: 2.2rem;
+                height: 2.2rem;
+                margin-right: 10px;
+                background: url("../img/i24/off/warning.png") center no-repeat;
+                background-size: 100%;
+            }
+            .wrn-txt {
+                font-size: 14px;
+                color: #ffffff;
+            }
+            .wrn-val {
+                font-size: 2.2rem;
+                color: #ffffff;
+                font-family: "lato-R";
+                width: 40px;
+                text-align: right;
+            }
+            &.ap .i {
+                background: url("../img/i36/fly.svg") center #12C8F0 no-repeat;
+                background-size: 100%;
+            }
+            &.hb .i {
+                background: url("../img/i36/ship.svg") center #653ED7 no-repeat;
+                background-size: 100%;
+            }
+            &.wrn .i-wrn {
+                background: url("../img/i24/on/warning.png") center no-repeat;
+                background-size: 100%;
+            }
+
+          }
+      }
+
+  }
+  

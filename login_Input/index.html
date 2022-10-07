@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 INPUT</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 로그인 input -->
+    <span class="span s-id">
+        <!--input의 상태 따라  input01 에 클래스 추가, 정책과 맞을때:ok,정책과 틀릴때:err-->
+        <input type="text" id="id" class="input01 id" placeholder="아이디">
+    </span> 
+    <span class="span s-pw">
+        <!--input의 상태 따라 input01 에 클래스 추가, 정책과 맞을때:ok,정책과 틀릴때:err-->
+        <input type="password" id="pw" class="input01 pw" placeholder="비밀번호">
+    </span>  
+
+<script>
+//로그인
+window.addEventListener('load',function(){
+    
+    let input01 = document.querySelectorAll('.input01');
+
+    input01.forEach(element => {
+        element.addEventListener('input',inputChange);    
+    });
+
+    let txton = document.querySelectorAll('.span');     
+
+    if(txton){
+        txton.forEach(element => {     
+            element.addEventListener('pointerdown',inputClear);    
+        });
+    }
+
+});
+
+
+const inputChange = (e) => {
+    let target = e.currentTarget;
+    let span = target.closest('.span');    
+
+    if(target.value.length > 0){
+        span.classList.add('txton');
+    }else if(target.value.length == 0){
+        span.classList.remove('txton');
+    }
+
+}
+
+const inputClear = (e) => {    
+    let target = e.currentTarget;    
+    let input = target.querySelector('input');
+    let Hastxton = target.classList.contains('txton');
+
+    if(Hastxton){               
+        input.value = '';
+        target.classList.remove('txton');
+    }
+}
+
+</script>   
+
+</body>
+</html>

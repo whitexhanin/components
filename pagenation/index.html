@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지네이션</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <span class="page-area">
+        <span class="prev-area">
+            <button class="first twoarr"></button>
+            <button class="prev onearr"></button>
+        </span>
+        <span class="page-num">
+            <button class="on">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+        </span>
+        <span class="next-area">
+            <button class="next onearr"></button>
+            <button class="last twoarr"></button>
+        </span>
+    </span>    
+    <script>
+    window.addEventListener('load',function(){
+
+    //페이징 숫자 버튼 클릭 시 
+    let btnPage = document.querySelectorAll('.page-num button');
+    btnPage.forEach(element => {
+        element.addEventListener('pointerdown',pageNumEvent);
+    });
+});
+    const pageNumEvent = (e) => {
+        let target = e.currentTarget;
+        let btnPageOn = document.querySelector('.page-num button.on');
+
+        btnPageOn.classList.remove('on');
+        target.classList.add('on');
+    }
+
+    </script>
+</body>
+</html>

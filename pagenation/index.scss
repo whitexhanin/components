@@ -1,0 +1,48 @@
+.page-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+    width:500px; 
+
+    .page-num {
+        padding: 0 13px;
+        button {
+            padding: 0 7px;
+            color: #999999;
+            font-size: 16px;
+            &.on {
+                color: #365DE7;
+              }
+          }
+      }
+      .prev-area,.next-area{
+        display: flex;
+      }
+      .prev-area button {
+        transform: rotate(180deg);
+      }
+      .twoarr {
+        display: flex;
+        width: 11px;
+        height: 11px;
+        background: url("../img/two-arr.svg") center no-repeat;
+        background-size: 100%;
+      }
+      .onearr {
+        width: 7px;
+        height: 11px;
+        background: url("../img/one-arr.svg") center no-repeat;
+        background-size: 100%;
+      }
+      .prev {
+        margin-left: 6px;
+      }
+      .next {
+        margin-right: 6px;
+      }
+  }
+  button {
+    border:none;
+    cursor: pointer;
+  }
