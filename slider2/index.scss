@@ -1,0 +1,122 @@
+.container {
+
+}
+.slider-wrap {
+    position:relative;
+    width:800px;    
+
+    .slider-body {
+        position:relative;
+        width:100%;        
+        overflow:hidden;
+        border:1px solid gold;
+
+        .slider-list {
+            display:flex;    
+            width:3200px;
+            height:500px;    
+            transition:transform 150ms ease-in-out;   
+        }
+        .page {
+            display:flex;                     
+            width:800px;
+            height:500px;            
+            flex-wrap: wrap;
+
+            list-style: none;
+            margin:0;
+            padding:0;
+
+            &.n1 {
+                background-color: burlywood;
+            }
+            &.n2 {
+                background-color: cornflowerblue;
+            }
+
+            li {
+                width:200px;
+                height:250px;
+                flex: 0 0 200px;
+                
+                &:nth-of-type(odd):nth-of-type(-1n+4) {
+                    background-color: darkslateblue;
+                }
+                &:nth-of-type(even):nth-of-type(-1n+4) {
+                    // background-color: fuchsia;
+                }
+                &:nth-of-type(odd):nth-of-type(1n+5) {
+                    // background-color: fuchsia;
+                }
+                &:nth-of-type(even):nth-of-type(1n+5) {
+                    background-color: darkslateblue;
+                }                
+            }
+        }
+    }
+    .btn-box {
+        position:relative;
+        height:20px;
+        display:flex;        
+        justify-content: flex-end;
+
+        .dot-wrap {
+            position:absolute;
+            left:50%;
+            top:50%;
+            display:flex;
+            gap:2px;
+            transform:translateY(-50%);
+
+            a {                
+                width:10px;
+                height:10px;
+                border-radius:100%;
+                background-color: indianred;
+                opacity:0.5;
+                &.on {
+                    opacity:1;
+                }
+            }
+        }
+        
+        .page_num {
+            display:none;
+            padding-right:20px;
+            &.on {
+                display:block;
+            }
+            em {
+                font-style: normal;
+            }
+            
+
+        }
+
+
+
+    }
+    .arrow {
+        .prev,.next {
+            position:absolute;
+            display:none;
+            color:black;                
+            font-size:50px;
+            text-decoration: none;
+            transform:translateY(-50%);
+            &.on {
+                display:inline-block;
+            }
+        }
+        .prev {
+            top:50%;
+            left:0;
+        }
+        .next {
+            top:50%;
+            right:0;
+        }
+
+
+    }
+}
