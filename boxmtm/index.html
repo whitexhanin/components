@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하단 경보 리스트</title>
+</head>
+<style>
+    ul {
+        position:absolute;
+        bottom:0;        
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    li {
+        list-style: none;
+        background-color: aqua;
+        width:200px;
+        height:50px;
+    }
+    li.now {
+        background-color: lightcoral;        
+        animation: itemUp 500ms 1 ;
+    }
+    @keyframes itemUp {
+        0% {
+            transform:translateY(10px);
+        }        
+        100% {
+            transform:translateY(0);
+        }
+
+    }
+</style>
+<body>
+    <button class="boxadd">box-add</button>
+    <ul class="list-box">
+        <li></li>        
+    </ul>
+    <script>
+    let boxadd = document.querySelector('.boxadd')
+        boxadd.addEventListener('click', e => {
+            moreBox() 
+    })
+
+    const moreBox = (e) => {
+        let ul = document.querySelector('.list-box');
+        let li = document.createElement('li');
+        li.setAttribute('class','now');
+        ul.append(li);
+    }
+
+
+    </script>
+</body>
+</html>
