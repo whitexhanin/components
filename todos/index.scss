@@ -1,0 +1,22 @@
+// reset
+* {
+    margin:0;
+    padding:0;
+}
+*:read-only {
+    border:none;
+
+}
+.all-ck {
+    cursor: pointer;
+    
+}
+.todo-ok {
+    input[type="text"] {
+        text-decoration: line-through;
+    }
+    input[type="checkbox"]:disabled {
+        background:gray;
+    }
+    
+}
