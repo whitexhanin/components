@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이드 메뉴</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>    
+    <!-- 사이드 메뉴-->
+    <div class="info-poi-area">
+        <button class="btn_open"></button>
+        <div class="info-box">            
+            <div class="box-wrap">
+                <div class="event">
+                    <ul class="scroll list listck">   
+                        리스트 (1)                
+                    </ul>
+                </div>
+                <div class="imm">                    
+                    <div class="">
+                        <ul>       
+                            리스트 (2)                                  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script>
+
+    window.addEventListener('load',function(){
+
+        //사이드 메뉴 오픈 버튼
+        let btnOpen = document.querySelector('.btn_open');
+        btnOpen.addEventListener('pointerdown',sideMenuOpen);
+    })
+    
+
+    //사이드 메뉴 오픈 버튼
+    const sideMenuOpen = (e) => {
+        let target = e.currentTarget;
+        let infoBox = document.querySelector('.info-box');
+
+        target.classList.toggle('on');
+        infoBox.classList.toggle('on');
+    }
+    
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>모바일 터치 제스쳐</title> 
+    <link rel="stylesheet" href="./style.css">   
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <canvas data-sub = "true" onpointerdown ='poiClick(event)'  style="position:absolute; top:50%; left:50%; transform:translate(-50% -50%); width:50px; height:50px; background:blue; font-size:1.8rem; " title="리스트 없음">행정지원과</canvas>
+        <canvas data-sub = "false" onpointerdown ='poiClick(event)'  style="position:absolute; top:30%; left:20%; transform:translate(-50% -50%); width:50px; height:50px; background:olivedrab; font-size:1.8rem;" title="리스트 있음">화장실</canvas>
+        <!-- 터치 핸들바 POI 정보 -->
+        <div class="pl-area" tabindex="0">
+            <div class="card">
+                <h5 class="t18">
+                    <span class="cb1">여성가족과</span>                            
+                </h5>
+                <div class="scroll">
+                    <ul class="list">
+                        <li>대외기관(중앙부처, 서울시 등) 협력사업 조정 및 신규사업 발굴</li>
+                        <li>지자체간 상생 협력 업무 조정 및 협의, 상위기관 중장기 계획 주요핵심과제 연계·추진</li>               
+                        <li>미래경쟁력 확보 관련 기업연계 협력사업 검토, 양주시 소재 구유재산 관리 및 활용방안 강구</li>
+                        <li>주요 주민숙원사업 발굴, 각 동 민의수렴 및 정책소통</li>     
+                        <li>시설관리공단 본부 지원, 지방자치단체 혁신 관련 업무, 제안 등 창의행정 추진, 위원회 운영</li>                                                                             
+                    </ul>                         
+                    <span class="tag-area2">
+                        <span class="tag2">보육운영</span>
+                        <span class="tag2">인사팀</span>
+                        <span class="tag2">후생교육팀</span>
+                        <span class="tag2">국제협력팀</span>
+                        <span class="tag2">총괄대책TF팀</span>
+                        <span class="tag2">재발방지TF팀</span>                        
+                    </span>   
+                </div>                                 
+                <button class="btn14 btnnv"> 
+                    <i class="inavi"></i>
+                    <span class="t-hdn">경로안내</span>                                                       
+                </button>  
+            </div>        
+        </div> 
+    </div>
+    <div class="dim"></div>
+</body>
+</html>

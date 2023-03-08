@@ -1,0 +1,239 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+    .ani2 {
+    position: relative;
+
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;
+    
+    animation-name:opa;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+.ani1 {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;        
+    animation-name: opa;
+    /* animation-delay: 3s; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+
+}
+.rotate {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;        
+    animation-name: rotate;
+    /* animation-delay: 3s; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;      
+}
+.tranY1 {
+    animation-name: tranY1;
+    /* animation-delay: 3s; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+.tranY2 {
+    animation-name: tranY2;
+    /* animation-delay: 1s; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;        
+}
+.tranY3 {
+    animation-name: tranY3;
+    /* animation-delay: 4s; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;        
+}
+.tranY4 {
+    animation-name: tranY2;
+    /* animation-delay: 1s; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;        
+}
+.tranY5 {
+    animation-name: tranY3;
+    /* animation-delay: 4s; */
+    animation-duration: 6s;
+    animation-iteration-count: infinite;        
+}
+.tranX {
+    animation-name: tranX;
+    /* animation-delay: 4s; */
+    animation-duration: 7s;
+    animation-iteration-count: infinite;  
+}
+.aniH1 {
+    animation-name: aniH1;
+    /* animation-delay: 4s; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+}
+@keyframes tranY1 {
+    0% {
+        transform:translateY(4px);
+    }
+    89% {
+        transform:translateY(8px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+@keyframes tranY2 {
+    0% {
+        transform:translateY(2px);
+    }
+    89% {
+        transform:translateY(5px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+@keyframes tranY3 {
+    0% {
+        transform:translateY(1px);
+    }
+    89% {
+        transform:translateY(8px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+
+
+
+
+@keyframes opa {        
+    0% {
+        opacity:0.4;
+    }
+    25% {
+        opacity:0.6;
+    }
+    50% {
+        opacity:1;
+    }
+    75% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg)
+    }
+    50% {
+        transform:rotate(180deg);
+        opacity:1;
+    }                            
+    100% {
+        transform:rotate(0deg);
+        opacity:1;
+    }                          
+}
+
+@keyframes tranX {
+    0% {
+        transform:translateX(0px);
+    }        
+    50% {
+        transform:translateX(-20px);
+    }        
+    100% {
+        transform:translateX(0px);
+    }
+}
+@keyframes aniH1 {
+    0%{
+        opacity:1;
+        transform:translateY(3px);
+    }
+    50%{
+        opacity:0;
+        transform:translateY(0px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+    </style>
+    <g clip-path="url(#clip0_151_8212)">
+        <circle cx="40" cy="46" r="28" fill="url(#paint0_linear_151_8212)" class="rotate" />
+        <g filter="url(#filter0_d_151_8212)">
+            <g filter="url(#filter1_bi_151_8212)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M34.198 86.9966C34.0948 86.9989 33.9913 87 33.8875 87C26.1707 87 19.9149 80.704 19.9149 72.9375C19.9149 67.6669 22.796 63.0735 27.0596 60.6655C27.0575 60.5377 27.0565 60.4096 27.0565 60.2812C27.0565 47.4234 37.4132 37 50.1889 37C61.209 37 70.4293 44.7555 72.7552 55.1393C81.1875 55.4956 87.9149 62.4884 87.9149 71.0625C87.9149 79.8645 80.8251 87 72.0793 87H34.198V86.9966Z" fill="url(#paint1_linear_151_8212)"/>
+            </g>
+            <g style="mix-blend-mode:soft-light">
+                <path d="M47.8601 72.9375C47.8601 80.704 41.6044 87 33.8875 87C26.1707 87 19.9149 80.704 19.9149 72.9375C19.9149 65.171 26.1707 58.875 33.8875 58.875C41.6044 58.875 47.8601 65.171 47.8601 72.9375Z" fill="url(#paint2_linear_151_8212)"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_d_151_8212" x="15.9149" y="37" width="76" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_151_8212"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_151_8212" result="shape"/>
+        </filter>
+        <filter id="filter1_bi_151_8212" x="4.91492" y="22" width="98" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_151_8212"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_151_8212" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="2.5"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_151_8212"/>
+        </filter>
+        <linearGradient id="paint0_linear_151_8212" x1="40" y1="18" x2="40" y2="74" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFCD21"/>
+            <stop offset="1" stop-color="#F1B31D"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_151_8212" x1="34.819" y1="47" x2="68.7013" y2="79.5593" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="1" stop-color="#DFE1ED"/>
+        </linearGradient>
+        <linearGradient id="paint2_linear_151_8212" x1="47.5151" y1="64.7778" x2="38.0825" y2="72.4962" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clip0_151_8212">
+            <rect width="96" height="96" fill="white"/>
+        </clipPath>
+    </defs>
+</svg> 

@@ -1,0 +1,239 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+    .ani2 {
+    position: relative;
+
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;
+    
+    animation-name:opa;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+.ani1 {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;        
+    animation-name: opa;
+    /* animation-delay: 3s; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+
+}
+.rotate {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform-origin: 50% 50%;        
+    animation-name: rotate;
+    /* animation-delay: 3s; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;      
+}
+.tranY1 {
+    animation-name: tranY1;
+    /* animation-delay: 3s; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+.tranY2 {
+    animation-name: tranY2;
+    /* animation-delay: 1s; */
+    animation-duration: 3s;
+    animation-iteration-count: infinite;        
+}
+.tranY3 {
+    animation-name: tranY3;
+    /* animation-delay: 4s; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;        
+}
+.tranY4 {
+    animation-name: tranY2;
+    /* animation-delay: 1s; */
+    animation-duration: 4s;
+    animation-iteration-count: infinite;        
+}
+.tranY5 {
+    animation-name: tranY3;
+    /* animation-delay: 4s; */
+    animation-duration: 6s;
+    animation-iteration-count: infinite;        
+}
+.tranX {
+    animation-name: tranX;
+    /* animation-delay: 4s; */
+    animation-duration: 7s;
+    animation-iteration-count: infinite;  
+}
+.aniH1 {
+    animation-name: aniH1;
+    /* animation-delay: 4s; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+}
+@keyframes tranY1 {
+    0% {
+        transform:translateY(4px);
+    }
+    89% {
+        transform:translateY(8px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+@keyframes tranY2 {
+    0% {
+        transform:translateY(2px);
+    }
+    89% {
+        transform:translateY(5px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+@keyframes tranY3 {
+    0% {
+        transform:translateY(1px);
+    }
+    89% {
+        transform:translateY(8px);
+    }
+    90% {
+        transform:translateY(0px);
+        opacity:0;
+    }
+    100% {
+        transform:translateY(0px);            
+    }
+
+}
+
+
+
+
+@keyframes opa {        
+    0% {
+        opacity:0.4;
+    }
+    25% {
+        opacity:0.6;
+    }
+    50% {
+        opacity:1;
+    }
+    75% {
+        opacity:0.6;
+    }
+    100% {
+        opacity:0.4;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg)
+    }
+    50% {
+        transform:rotate(180deg);
+        opacity:1;
+    }                            
+    100% {
+        transform:rotate(0deg);
+        opacity:1;
+    }                          
+}
+
+@keyframes tranX {
+    0% {
+        transform:translateX(0px);
+    }        
+    50% {
+        transform:translateX(-20px);
+    }        
+    100% {
+        transform:translateX(0px);
+    }
+}
+@keyframes aniH1 {
+    0%{
+        opacity:1;
+        transform:translateY(3px);
+    }
+    50%{
+        opacity:0;
+        transform:translateY(0px);
+    }
+    100% {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+</style>
+    <g clip-path="url(#clip0_151_8215)">
+        <g filter="url(#filter0_d_151_8215)">
+            <g filter="url(#filter1_bi_151_8215)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.2831 59.9966C28.1799 59.9989 28.0764 60 27.9726 60C20.2557 60 14 53.704 14 45.9375C14 40.6669 16.8811 36.0735 21.1446 33.6655C21.1426 33.5377 21.1416 33.4096 21.1416 33.2812C21.1416 20.4234 31.4983 10 44.274 10C55.2941 10 64.5144 17.7555 66.8403 28.1393C75.2725 28.4956 82 35.4884 82 44.0625C82 52.8645 74.9102 60 66.1644 60H28.2831V59.9966Z" fill="url(#paint0_linear_151_8215)"/>
+            </g>
+            <g style="mix-blend-mode:soft-light">
+                <path d="M41.9452 45.9375C41.9452 53.704 35.6895 60 27.9726 60C20.2557 60 14 53.704 14 45.9375C14 38.171 20.2557 31.875 27.9726 31.875C35.6895 31.875 41.9452 38.171 41.9452 45.9375Z" fill="url(#paint1_linear_151_8215)"/>
+            </g>
+        </g>    
+        <path d="M38.219 63.9566C38.557 63.6373 39.1143 63.8389 39.1667 64.2995L39.5938 68.0488C39.7998 69.8578 38.0247 71.2564 36.3099 70.636L-nan -nanL36.3099 70.636C34.5951 70.0156 34.1396 67.81 35.4673 66.5559L38.219 63.9566Z" fill="#007BFE" class="tranY1"/>
+        <path d="M48.683 63.9566C49.021 63.6373 49.5783 63.8389 49.6307 64.2995L50.0578 68.0488C50.2638 69.8578 48.4887 71.2564 46.7739 70.636L-nan -nanL46.7739 70.636C45.0591 70.0156 44.6036 67.81 45.9313 66.5559L48.683 63.9566Z" fill="#007BFE" class="tranY2"/>
+        <path d="M59.8689 63.9566C60.2069 63.6373 60.7642 63.8389 60.8166 64.2995L61.2437 68.0488C61.4497 69.8578 59.6746 71.2564 57.9598 70.636L-nan -nanL57.9598 70.636C56.245 70.0156 55.7895 67.81 57.1172 66.5559L59.8689 63.9566Z" fill="#007BFE" class="tranY3"/>
+        <path d="M41.8269 75.5081C42.1643 75.1889 42.7213 75.3913 42.7742 75.8523L43.2048 79.6053C43.4126 81.4162 41.6405 82.8142 39.9265 82.1914L-nan -nanL39.9265 82.1914C38.2126 81.5687 37.7552 79.3607 39.0804 78.1068L41.8269 75.5081Z" fill="#007BFE" class="tranY4"/>
+        <path d="M52.291 75.5081C52.6284 75.1889 53.1854 75.3913 53.2383 75.8523L53.6689 79.6053C53.8767 81.4162 52.1046 82.8142 50.3906 82.1914L-nan -nanL50.3906 82.1914C48.6767 81.5687 48.2193 79.3607 49.5445 78.1068L52.291 75.5081Z" fill="#007BFE" class="tranY5"/>
+    </g>
+    <defs>
+        <filter id="filter0_d_151_8215" x="10" y="10" width="76" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_151_8215"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_151_8215" result="shape"/>
+        </filter>
+        <filter id="filter1_bi_151_8215" x="-1" y="-5" width="98" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_151_8215"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_151_8215" result="shape"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dx="3" dy="3"/>
+            <feGaussianBlur stdDeviation="2.5"/>
+            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_151_8215"/>
+        </filter>
+        <linearGradient id="paint0_linear_151_8215" x1="28.9041" y1="20" x2="62.7863" y2="52.5593" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="1" stop-color="#DFE1ED"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_151_8215" x1="41.6002" y1="37.7778" x2="32.1676" y2="45.4962" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="clip0_151_8215">
+            <rect width="96" height="96" fill="white"/>
+        </clipPath>
+    </defs>
+    </svg> 

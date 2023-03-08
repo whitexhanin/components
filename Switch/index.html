@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글:스위치 토글,메뉴 탭 토글,사이드 메뉴 토글</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 스위치 토글 -->
+    <button class="switch01"></button>
+    
+<script>
+
+    window.addEventListener('load',function(){
+        // 스위치 토글
+        let switch01 = document.querySelectorAll('.switch01');
+        switch01.forEach(element => {
+            element.addEventListener('pointerdown',switch01Event);
+        });
+        
+    })
+
+    // 스위치 토글
+    const switch01Event = (e) => {
+        let target = e.currentTarget;
+        target.classList.toggle('on');
+    }
+    
+    
+
+</script>    
+</body>
+</html>

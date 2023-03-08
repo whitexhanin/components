@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토글:스위치 토글,메뉴 탭 토글,사이드 메뉴 토글</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>    
+    <!--메뉴 토글 -->
+    <div class="btn-switch">
+        <button class="event left0 on">                        
+            <span class="tit">최근 이벤트</span>
+            <span class="count">20</span>
+        </button>
+        <button class="imm left100">
+            <span class="tit">심사대</span>
+            <span class="count">25</span>
+        </button>
+    </div>
+    
+    
+<script>
+
+    window.addEventListener('load',function(){
+        
+
+        // 메뉴 토글
+        let btnSwitch = document.querySelectorAll('.btn-switch button');
+    
+        btnSwitch.forEach(element => {
+            element.addEventListener('pointerdown',btnSwitchEvent);
+        });
+
+       
+    })
+    
+
+    // 메뉴 토글
+    const btnSwitchEvent = (e) => {
+        let target = e.currentTarget;
+        let btnWrap = target.closest('.btn-switch');  
+        let boxWrap = document.querySelector('.box-wrap');
+        let btnOn = btnWrap.querySelector('button.on');
+
+        if(!target.classList.contains('on')){
+            btnOn.classList.remove('on');
+            target.classList.add('on');
+
+            if(target.classList.contains('left100')){
+                btnWrap.setAttribute('class','btn-switch left100');
+                boxWrap.classList.add('on');
+            }else {
+                btnWrap.setAttribute('class','btn-switch');
+                boxWrap.classList.remove('on');
+            }
+
+        }
+    }
+
+    
+    
+
+</script>    
+</body>
+</html>
