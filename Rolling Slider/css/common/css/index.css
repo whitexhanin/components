@@ -1,0 +1,43 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'NotoSansCJKkr-Regular';
+  src: url('./webfonts/NotosansCJK/NotoSansCJKkr-Regular/NotoSansCJKkr-Regular.eot');
+  src: url('./webfonts/NotosansCJK/NotoSansCJKkr-Regular/NotoSansCJKkr-Regular.eot?#iefix') format('embedded-opentype'),                
+       url('./webfonts/NotosansCJK/NotoSansCJKkr-Regular/NotoSansCJKkr-Regular.woff') format('woff');         
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSansCJKkr-Medium';
+   
+  src: url('./webfonts/NotosansCJK/NotoSansCJKkr-Medium/NotoSansCJKkr-Medium.eot');
+  src: url('./webfonts/NotosansCJK/NotoSansCJKkr-Medium/NotoSansCJKkr-Medium.eot?#iefix') format('embedded-opentype'),         
+       url('./webfonts/NotosansCJK/NotoSansCJKkr-Medium/NotoSansCJKkr-Medium.woff') format('woff');         
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./webfonts/Roboto-Regular/Roboto-Regular.eot');
+  src: url('./webfonts/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./webfonts/Roboto-Regular/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+       url('./webfonts/Roboto-Regular/Roboto-Regular.ttf') format('truetype'),
+       url('./webfonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+       url('./webfonts/Roboto-Regular/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size:62.5%;
+  font-family: 'NotoSansCJKkr-Regular', sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background: #0C0F22; */
+}
+.container {
+  width:100%;
+  height:100%;
+}
