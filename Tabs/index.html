@@ -40,8 +40,7 @@
     // 메뉴 토글
     const btnSwitchEvent = (e) => {
         let target = e.currentTarget;
-        let btnWrap = target.closest('.btn-switch');  
-        let boxWrap = document.querySelector('.box-wrap');
+        let btnWrap = target.closest('.btn-switch');          
         let btnOn = btnWrap.querySelector('button.on');
 
         if(!target.classList.contains('on')){
@@ -49,11 +48,9 @@
             target.classList.add('on');
 
             if(target.classList.contains('left100')){
-                btnWrap.setAttribute('class','btn-switch left100');
-                boxWrap.classList.add('on');
+                btnWrap.setAttribute('class','btn-switch left100');                
             }else {
-                btnWrap.setAttribute('class','btn-switch');
-                boxWrap.classList.remove('on');
+                btnWrap.setAttribute('class','btn-switch');                
             }
 
         }

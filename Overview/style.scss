@@ -5,19 +5,38 @@
     width:212px;
     height:100%;
     background:rgb(54,41,41);
-    ul {
+    .itemlist {
         overflow-y: auto;
         height:100vh;
+        >li {
+            flex-direction: column;
+            >button {
+                width:196px;
+            }
+        }
+    }
+    .sublist {
+        padding-left:16px;
+        height:0;
+        overflow:hidden;        
+        -webkit-transition:height 100ms linear,overflow 100ms linear;
+        
+
+        >li {
+            >button {
+                width:186px;
+            }
+        }
     }
 
     li {
-        display:flex;
+        display:flex;        
         justify-content: center;
     }
     button {
         position:relative;
         text-align:left;
-        width:196px;
+        // width:196px;
         height:48px;
         padding:0 16px;
         font-size:14px;
@@ -55,9 +74,40 @@
             &:before {
                 opacity:1;
                 transform:scale(1);
+            }            
+        }
+        &.more {
+            position:relative;
+            &.open {
+                &:before {
+                    opacity:1;
+                    transform:scale(1);
+                    background:linear-gradient(0deg,hsla(3,22%,80%,.08),hsla(3,22%,80%,.08));
+                }
+                &+.sublist {
+                    height:calc(48px * 2);                    
+                }
+                &:after {
+                transform:translateY(-50%) rotate(180deg);
+                -webkit-transform:translateY(-50%) rotate(180deg);
+                }
+            }            
+            &:after {
+                content:'';
+                position:absolute;
+                top:50%;
+                right:16px;
+                width:0;
+                height:0;
+                border-top:5px solid #ffffff;
+                border-left:5px solid transparent;
+                border-right:5px solid transparent;
+                transition:transform 100ms linear;
+                -webkit-transition:transform 100ms linear;
+                transform:translateY(-50%) rotate(0deg);
+                -webkit-transform:translateY(-50%) rotate(0deg);
 
             }
-            
         }
     }
 }

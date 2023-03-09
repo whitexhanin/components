@@ -1,0 +1,91 @@
+.container {
+  background: #000;
+}
+/* 경보 이벤트*/
+.warnning-event {
+  display:flex; 
+  position:absolute;  
+  top:50%;
+  left:50%; 
+  transform: translate(5px , 5px);
+}
+.warnning-event .wrap {
+  position:relative;
+  display:block;    
+}
+.warnning-event .wrap .dot {    
+  display:block;
+  width:14px;
+  height:14px;
+  background: #FADC3F;
+  border:3px solid #FD2727;
+  border-radius:50vh;
+  z-index:1;
+  transform:translate(-50% , -50%);  
+  cursor: pointer;
+}
+.warnning-event .wrap span { 
+  position:absolute;
+  top:50%;
+  left:50%;
+  transition:0.3s;
+
+}
+.warnning-event .wrap span.event01 { 
+  display:block;
+  width:20px;
+  height:20px;
+  border-radius: 50vh;
+  transform:translate(-50% , -50%);    
+  background: rgba(253, 70, 72 ,0.2);   
+  animation: wave 3s infinite linear;
+}
+.warnning-event .wrap span.event02 { 
+  display:block;
+  width:20px;
+  height:20px;
+  border-radius: 50vh;
+  transform:translate(-50% , -50%);    
+
+  background: rgba(253, 70, 72 ,0.6);    
+  animation: wave 3s 1s infinite linear;
+} 
+.warnning-event .wrap span.event03 { 
+  display:block;
+  width:20px;
+  height:20px;
+  border-radius: 50vh;
+  transform:translate(-50% , -50%);    
+  background: rgba(253, 70, 72 ,0.6);    
+  animation: wave 3s 2s infinite linear;    
+}
+.warnning-event.s_2 {
+  transform:translate(14px,7px);
+}
+.warnning-event.s_5 {
+  transform:translate(7px,14px);
+}
+.warnning-event.s_6 {
+  transform:translate(7px,14px);
+}
+.warnning-event.s_8 {
+  transform:translate(15px,13px);
+}
+.warnning-event.s_11 {
+  transform:translate(14px,7px);
+}
+.warnning-event.s_18 {
+  transform:translate(14px,7px);
+}
+
+
+@keyframes wave {    
+  0% {
+      transform:translate(-50% , -50%) scale(1); 
+      opacity:1;      
+  }
+  100% {
+      transform:translate(-50% , -50%) scale(4);   
+      opacity:0;     
+  }
+}

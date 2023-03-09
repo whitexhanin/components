@@ -26,13 +26,13 @@
   display: flex;
   width: 11px;
   height: 11px;
-  background: url("../img/two-arr.svg") center no-repeat;
+  background: url("./img/two-arr.svg") center no-repeat;
   background-size: 100%;
 }
 .page-area .onearr {
   width: 7px;
   height: 11px;
-  background: url("../img/one-arr.svg") center no-repeat;
+  background: url("./img/one-arr.svg") center no-repeat;
   background-size: 100%;
 }
 .page-area .prev {

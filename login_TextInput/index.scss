@@ -11,7 +11,7 @@
         top: 0;
         right: 14px;
         text-align: center;
-        background: url("../img/btn_close.svg") center no-repeat;
+        background: url("./img/btn_close.png") center no-repeat;
         background-size: 1.6rem 1.6rem;
         cursor: pointer;
       }
@@ -24,13 +24,13 @@
         left: 16px;
       }
       &.s-pw:after {
-        background: url('../img/password.svg') center no-repeat;
+        background: url('./img/password.svg') center no-repeat;
         background-size: 2.3rem;
       }
       &.s-id {
         margin-bottom: 1.85rem;
         &:after {
-            background: url('../img/id.svg') center no-repeat;
+            background: url('./img/id.svg') center no-repeat;
             background-size: 2.3rem;
           }
       }

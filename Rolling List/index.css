@@ -54,7 +54,7 @@
   width: 2.2rem;
   height: 2.2rem;
   margin-right: 10px;
-  background: url("../img/i24/off/warning.png") center no-repeat;
+  background: url("./img/off/warning.png") center no-repeat;
   background-size: 100%;
 }
 .now-imm ul li .wrn-txt {
@@ -69,14 +69,14 @@
   text-align: right;
 }
 .now-imm ul li.ap .i {
-  background: url("../img/i36/fly.svg") center #12C8F0 no-repeat;
+  background: url("./img/fly.svg") center #12C8F0 no-repeat;
   background-size: 100%;
 }
 .now-imm ul li.hb .i {
-  background: url("../img/i36/ship.svg") center #653ED7 no-repeat;
+  background: url("./img/ship.svg") center #653ED7 no-repeat;
   background-size: 100%;
 }
 .now-imm ul li.wrn .i-wrn {
-  background: url("../img/i24/on/warning.png") center no-repeat;
+  background: url("./img/on/warning.png") center no-repeat;
   background-size: 100%;
 }
