@@ -85,7 +85,7 @@
                     background:linear-gradient(0deg,hsla(3,22%,80%,.08),hsla(3,22%,80%,.08));
                 }
                 &+.sublist {
-                    height:calc(48px * 2);                    
+                    height:calc(48px * 6);                    
                 }
                 &:after {
                 transform:translateY(-50%) rotate(180deg);

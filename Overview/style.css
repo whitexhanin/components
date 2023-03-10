@@ -78,7 +78,7 @@
   background: linear-gradient(0deg, rgba(215, 194, 193, 0.08), rgba(215, 194, 193, 0.08));
 }
 .side_sheets button.more.open + .sublist {
-  height: calc(48px * 2);
+  height: calc(48px * 6);
 }
 .side_sheets button.more.open:after {
   transform: translateY(-50%) rotate(180deg);
