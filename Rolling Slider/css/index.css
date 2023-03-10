@@ -1,5 +1,6 @@
 .container {
   background:#000;
+  font-size:1vh;
 }
 .notice-wrap.on {
     display:flex;
