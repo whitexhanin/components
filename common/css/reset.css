@@ -45,3 +45,11 @@ a { text-decoration:none;}
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
 }
+button {
+    background:transparent;
+    border-color:transparent;
+    cursor: pointer;
+    font-family: 'NotoSanskr-R';
+    border:none;
+    padding:0;
+}
