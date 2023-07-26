@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <title>DatePicker</title>            
+    <link rel="stylesheet" href="./custompicker.css">
+    <link rel="stylesheet" href="./datepicker.css">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <script src="./datepicker-full.min.js"></script>  
+    <script src="./datepicker.js"></script>  
 </head>
 <body>
-    <!-- <input type="text" name="foo"> -->
-    <div id="foo">
-        <input type="text" name="start">
-        <span>to</span>
-        <input type="text" name="end">  
-      </div>
-<script>
-    const elem = document.getElementById('foo');
-// const datepicker = new Datepicker(elem, {
-//   // ...options
-// }); 
-const rangepicker = new DateRangePicker(elem, {
-  // ...options
-}); 
-</script>
-    
+  <div class="condition">                        
+    <div class="std-wrap date-range">
+        <span class="st">기간</span> 
+        <input type="text" name="start" class="calendar mgr-6" value="2023-01-01" inputmode="none">                            
+        <input type="text" name="end" class="calendar" value="2023-02-01" inputmode="none">  
+    </div>
+  </div>
+  <span class="sd">
+    <input type="text" name="" class=" calendar date-default"  data-date="2023-01-01" inputmode="none">
+</span>    
 </body>
 </html>

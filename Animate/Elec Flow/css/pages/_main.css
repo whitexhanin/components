@@ -1,0 +1,267 @@
+#content .animate {
+  display: none;
+}
+#content.snar01 .animate, #content.snar03 .animate {
+  display: block;
+}
+#content.snar01 .an12, #content.snar01 .an13, #content.snar03 .an12, #content.snar03 .an13 {
+  display: none;
+}
+#content.snar01 .an6 ._a1 .arr-y, #content.snar01 .an7 ._a1 .arr-y, #content.snar01 .an8 ._a1 .arr-y, #content.snar01 .an9 ._a1 .arr-y, #content.snar01 .an10 ._a1 .arr-y, #content.snar03 .an6 ._a1 .arr-y, #content.snar03 .an7 ._a1 .arr-y, #content.snar03 .an8 ._a1 .arr-y, #content.snar03 .an9 ._a1 .arr-y, #content.snar03 .an10 ._a1 .arr-y {
+  display: none;
+}
+#content.snar01 .an6 ._a3 .arrleft, #content.snar01 .an7 ._a3 .arrleft, #content.snar01 .an8 ._a3 .arrleft, #content.snar01 .an9 ._a3 .arrleft, #content.snar01 .an10 ._a3 .arrleft, #content.snar03 .an6 ._a3 .arrleft, #content.snar03 .an7 ._a3 .arrleft, #content.snar03 .an8 ._a3 .arrleft, #content.snar03 .an9 ._a3 .arrleft, #content.snar03 .an10 ._a3 .arrleft {
+  display: none;
+}
+#content.snar01 .an6 ._a4 .arrright, #content.snar01 .an7 ._a4 .arrright, #content.snar01 .an8 ._a4 .arrright, #content.snar01 .an9 ._a4 .arrright, #content.snar01 .an10 ._a4 .arrright, #content.snar03 .an6 ._a4 .arrright, #content.snar03 .an7 ._a4 .arrright, #content.snar03 .an8 ._a4 .arrright, #content.snar03 .an9 ._a4 .arrright, #content.snar03 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar01 .an10 ._a2 .arry, #content.snar03 .an10 ._a2 .arry {
+  display: none;
+}
+#content.snar02 .animate {
+  display: block;
+}
+#content.snar02 .an5, #content.snar02 .an6, #content.snar02 .an7, #content.snar02 .an8, #content.snar02 .an9, #content.snar02 .an10, #content.snar02 .an11, #content.snar02 .an12, #content.snar02 .an13 {
+  display: none;
+}
+#content.snar04 .animate, #content.snar05 .animate, #content.snar06 .animate, #content.snar07 .animate, #content.snar08 .animate {
+  display: block;
+}
+#content.snar04 .an12, #content.snar04 .an13, #content.snar05 .an12, #content.snar05 .an13, #content.snar06 .an12, #content.snar06 .an13, #content.snar07 .an12, #content.snar07 .an13, #content.snar08 .an12, #content.snar08 .an13 {
+  display: none;
+}
+#content.snar04 .an6 ._a1 .arr-y, #content.snar04 .an7 ._a1 .arr-y, #content.snar04 .an8 ._a1 .arr-y, #content.snar04 .an9 ._a1 .arr-y, #content.snar04 .an10 ._a1 .arr-y, #content.snar05 .an6 ._a1 .arr-y, #content.snar05 .an7 ._a1 .arr-y, #content.snar05 .an8 ._a1 .arr-y, #content.snar05 .an9 ._a1 .arr-y, #content.snar05 .an10 ._a1 .arr-y, #content.snar06 .an6 ._a1 .arr-y, #content.snar06 .an7 ._a1 .arr-y, #content.snar06 .an8 ._a1 .arr-y, #content.snar06 .an9 ._a1 .arr-y, #content.snar06 .an10 ._a1 .arr-y, #content.snar07 .an6 ._a1 .arr-y, #content.snar07 .an7 ._a1 .arr-y, #content.snar07 .an8 ._a1 .arr-y, #content.snar07 .an9 ._a1 .arr-y, #content.snar07 .an10 ._a1 .arr-y, #content.snar08 .an6 ._a1 .arr-y, #content.snar08 .an7 ._a1 .arr-y, #content.snar08 .an8 ._a1 .arr-y, #content.snar08 .an9 ._a1 .arr-y, #content.snar08 .an10 ._a1 .arr-y {
+  display: none;
+}
+#content.snar04 .an6 ._a3 .arrleft, #content.snar04 .an7 ._a3 .arrleft, #content.snar04 .an8 ._a3 .arrleft, #content.snar04 .an9 ._a3 .arrleft, #content.snar04 .an10 ._a3 .arrleft, #content.snar05 .an6 ._a3 .arrleft, #content.snar05 .an7 ._a3 .arrleft, #content.snar05 .an8 ._a3 .arrleft, #content.snar05 .an9 ._a3 .arrleft, #content.snar05 .an10 ._a3 .arrleft, #content.snar06 .an6 ._a3 .arrleft, #content.snar06 .an7 ._a3 .arrleft, #content.snar06 .an8 ._a3 .arrleft, #content.snar06 .an9 ._a3 .arrleft, #content.snar06 .an10 ._a3 .arrleft, #content.snar07 .an6 ._a3 .arrleft, #content.snar07 .an7 ._a3 .arrleft, #content.snar07 .an8 ._a3 .arrleft, #content.snar07 .an9 ._a3 .arrleft, #content.snar07 .an10 ._a3 .arrleft, #content.snar08 .an6 ._a3 .arrleft, #content.snar08 .an7 ._a3 .arrleft, #content.snar08 .an8 ._a3 .arrleft, #content.snar08 .an9 ._a3 .arrleft, #content.snar08 .an10 ._a3 .arrleft {
+  display: none;
+}
+#content.snar04 .an6 ._a4 .arrright, #content.snar04 .an7 ._a4 .arrright, #content.snar04 .an8 ._a4 .arrright, #content.snar04 .an9 ._a4 .arrright, #content.snar04 .an10 ._a4 .arrright, #content.snar05 .an6 ._a4 .arrright, #content.snar05 .an7 ._a4 .arrright, #content.snar05 .an8 ._a4 .arrright, #content.snar05 .an9 ._a4 .arrright, #content.snar05 .an10 ._a4 .arrright, #content.snar06 .an6 ._a4 .arrright, #content.snar06 .an7 ._a4 .arrright, #content.snar06 .an8 ._a4 .arrright, #content.snar06 .an9 ._a4 .arrright, #content.snar06 .an10 ._a4 .arrright, #content.snar07 .an6 ._a4 .arrright, #content.snar07 .an7 ._a4 .arrright, #content.snar07 .an8 ._a4 .arrright, #content.snar07 .an9 ._a4 .arrright, #content.snar07 .an10 ._a4 .arrright, #content.snar08 .an6 ._a4 .arrright, #content.snar08 .an7 ._a4 .arrright, #content.snar08 .an8 ._a4 .arrright, #content.snar08 .an9 ._a4 .arrright, #content.snar08 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar04 .an10 ._a2 .arry, #content.snar05 .an10 ._a2 .arry, #content.snar06 .an10 ._a2 .arry, #content.snar07 .an10 ._a2 .arry, #content.snar08 .an10 ._a2 .arry {
+  display: none;
+}
+#content.snar04 .an6 {
+  display: none;
+}
+#content.snar05 .an7 {
+  display: none;
+}
+#content.snar06 .an8 {
+  display: none;
+}
+#content.snar07 .an9 {
+  display: none;
+}
+#content.snar08 .an10 {
+  display: none;
+}
+#content.snar09 .animate {
+  display: none;
+}
+#content.snar10 .animate {
+  display: block;
+}
+#content.snar10 .an1, #content.snar10 .an2, #content.snar10 .an3, #content.snar10 .an4, #content.snar10 .an5, #content.snar10 .an6, #content.snar10 .an7, #content.snar10 .an8, #content.snar10 .an9, #content.snar10 .an10, #content.snar10 .an11, #content.snar10 .an13 {
+  display: none;
+}
+#content.snar11 .animate {
+  display: block;
+}
+#content.snar11 .an1, #content.snar11 .an2, #content.snar11 .an3, #content.snar11 .an4, #content.snar11 .an5, #content.snar11 .an6, #content.snar11 .an7, #content.snar11 .an8, #content.snar11 .an9, #content.snar11 .an10 {
+  display: none;
+}
+#content.snar12 .animate {
+  display: block;
+}
+#content.snar12 .an1, #content.snar12 .an2, #content.snar12 .an3, #content.snar12 .an4, #content.snar12 .an5, #content.snar12 .an7, #content.snar12 .an8, #content.snar12 .an9, #content.snar12 .an10 {
+  display: none;
+}
+#content.snar12 .an6 ._a1 .arry {
+  display: none;
+}
+#content.snar12 .an6 ._a3 .arrleft {
+  display: none;
+}
+#content.snar12 .an6 ._a4 .arrleft {
+  display: none;
+}
+#content.snar13 .animate {
+  display: block;
+}
+#content.snar13 .an1, #content.snar13 .an2, #content.snar13 .an3, #content.snar13 .an4, #content.snar13 .an5, #content.snar13 .an8, #content.snar13 .an9, #content.snar13 .an10 {
+  display: none;
+}
+#content.snar13 .an6 ._a1 .arry, #content.snar13 .an7 ._a1 .arry {
+  display: none;
+}
+#content.snar13 .an6 ._a3 .arrleft, #content.snar13 .an7 ._a3 .arrleft {
+  display: none;
+}
+#content.snar13 .an6 ._a4 .arrleft, #content.snar13 .an7 ._a4 .arrleft {
+  display: none;
+}
+#content.snar14 .animate {
+  display: block;
+}
+#content.snar14 .an1, #content.snar14 .an2, #content.snar14 .an3, #content.snar14 .an4, #content.snar14 .an5, #content.snar14 .an9, #content.snar14 .an10 {
+  display: none;
+}
+#content.snar14 .an6 ._a1 .arry, #content.snar14 .an7 ._a1 .arry, #content.snar14 .an8 ._a1 .arry {
+  display: none;
+}
+#content.snar14 .an6 ._a3 .arrleft, #content.snar14 .an7 ._a3 .arrleft, #content.snar14 .an8 ._a3 .arrleft {
+  display: none;
+}
+#content.snar14 .an6 ._a4 .arrleft, #content.snar14 .an7 ._a4 .arrleft, #content.snar14 .an8 ._a4 .arrleft {
+  display: none;
+}
+#content.snar15 .animate {
+  display: block;
+}
+#content.snar15 .an1, #content.snar15 .an2, #content.snar15 .an3, #content.snar15 .an4, #content.snar15 .an5, #content.snar15 .an10 {
+  display: none;
+}
+#content.snar15 .an6 ._a1 .arry, #content.snar15 .an7 ._a1 .arry, #content.snar15 .an8 ._a1 .arry, #content.snar15 .an9 ._a1 .arry {
+  display: none;
+}
+#content.snar15 .an6 ._a3 .arrleft, #content.snar15 .an7 ._a3 .arrleft, #content.snar15 .an8 ._a3 .arrleft, #content.snar15 .an9 ._a3 .arrleft {
+  display: none;
+}
+#content.snar15 .an6 ._a4 .arrleft, #content.snar15 .an7 ._a4 .arrleft, #content.snar15 .an8 ._a4 .arrleft, #content.snar15 .an9 ._a4 .arrleft {
+  display: none;
+}
+#content.snar16 .animate {
+  display: block;
+}
+#content.snar16 .an1, #content.snar16 .an2, #content.snar16 .an3, #content.snar16 .an4, #content.snar16 .an5 {
+  display: none;
+}
+#content.snar16 .an6 ._a1 .arry, #content.snar16 .an7 ._a1 .arry, #content.snar16 .an8 ._a1 .arry, #content.snar16 .an9 ._a1 .arry, #content.snar16 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar16 .an6 ._a3 .arrleft, #content.snar16 .an7 ._a3 .arrleft, #content.snar16 .an8 ._a3 .arrleft, #content.snar16 .an9 ._a3 .arrleft, #content.snar16 .an10 ._a3 .arrleft {
+  display: none;
+}
+#content.snar16 .an6 ._a4 .arrleft, #content.snar16 .an7 ._a4 .arrleft, #content.snar16 .an8 ._a4 .arrleft, #content.snar16 .an9 ._a4 .arrleft, #content.snar16 .an10 ._a4 .arrleft {
+  display: none;
+}
+#content.snar16 .an10 ._a2 .arry {
+  display: none;
+}
+#content.snar17 .animate {
+  display: block;
+}
+#content.snar17 .an1, #content.snar17 .an2, #content.snar17 .an3, #content.snar17 .an4, #content.snar17 .an5, #content.snar17 .an6, #content.snar17 .an7, #content.snar17 .an8, #content.snar17 .an9 {
+  display: none;
+}
+#content.snar17 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar17 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar17 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar17 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar18 .animate {
+  display: block;
+}
+#content.snar18 .an1, #content.snar18 .an2, #content.snar18 .an3, #content.snar18 .an4, #content.snar18 .an5, #content.snar18 .an6, #content.snar18 .an7, #content.snar18 .an8 {
+  display: none;
+}
+#content.snar18 .an9 ._a1 .arry, #content.snar18 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar18 .an9 ._a3 .arrright, #content.snar18 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar18 .an9 ._a4 .arrright, #content.snar18 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar18 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar19 .animate {
+  display: block;
+}
+#content.snar19 .an1, #content.snar19 .an2, #content.snar19 .an3, #content.snar19 .an4, #content.snar19 .an5, #content.snar19 .an6, #content.snar19 .an7 {
+  display: none;
+}
+#content.snar19 .an8 ._a1 .arry, #content.snar19 .an9 ._a1 .arry, #content.snar19 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar19 .an8 ._a3 .arrright, #content.snar19 .an9 ._a3 .arrright, #content.snar19 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar19 .an8 ._a4 .arrright, #content.snar19 .an9 ._a4 .arrright, #content.snar19 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar19 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar20 .animate {
+  display: block;
+}
+#content.snar20 .an1, #content.snar20 .an2, #content.snar20 .an3, #content.snar20 .an4, #content.snar20 .an5, #content.snar20 .an6 {
+  display: none;
+}
+#content.snar20 .an7 ._a1 .arry, #content.snar20 .an8 ._a1 .arry, #content.snar20 .an9 ._a1 .arry, #content.snar20 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar20 .an7 ._a3 .arrright, #content.snar20 .an8 ._a3 .arrright, #content.snar20 .an9 ._a3 .arrright, #content.snar20 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar20 .an7 ._a4 .arrright, #content.snar20 .an8 ._a4 .arrright, #content.snar20 .an9 ._a4 .arrright, #content.snar20 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar20 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar21 .animate {
+  display: block;
+}
+#content.snar21 .an1, #content.snar21 .an2, #content.snar21 .an3, #content.snar21 .an4, #content.snar21 .an5 {
+  display: none;
+}
+#content.snar21 .an6 ._a1 .arry, #content.snar21 .an7 ._a1 .arry, #content.snar21 .an8 ._a1 .arry, #content.snar21 .an9 ._a1 .arry, #content.snar21 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar21 .an6 ._a3 .arrright, #content.snar21 .an7 ._a3 .arrright, #content.snar21 .an8 ._a3 .arrright, #content.snar21 .an9 ._a3 .arrright, #content.snar21 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar21 .an6 ._a4 .arrright, #content.snar21 .an7 ._a4 .arrright, #content.snar21 .an8 ._a4 .arrright, #content.snar21 .an9 ._a4 .arrright, #content.snar21 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar21 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar22 .animate {
+  display: block;
+}
+#content.snar22 .an1, #content.snar22 .an2, #content.snar22 .an3, #content.snar22 .an4, #content.snar22 .an5 {
+  display: none;
+}
+#content.snar22 .an6 ._a1 .arry, #content.snar22 .an7 ._a1 .arry, #content.snar22 .an8 ._a1 .arry, #content.snar22 .an9 ._a1 .arry, #content.snar22 .an10 ._a1 .arry {
+  display: none;
+}
+#content.snar22 .an7 ._a3 .arrright, #content.snar22 .an8 ._a3 .arrright, #content.snar22 .an9 ._a3 .arrright, #content.snar22 .an10 ._a3 .arrright {
+  display: none;
+}
+#content.snar22 .an7 ._a4 .arrright, #content.snar22 .an8 ._a4 .arrright, #content.snar22 .an9 ._a4 .arrright, #content.snar22 .an10 ._a4 .arrright {
+  display: none;
+}
+#content.snar22 .an10 ._a2 .arr-y {
+  display: none;
+}
+#content.snar22 .an6 ._a3 .arrleft {
+  display: none;
+}
+#content.snar22 .an6 ._a4 .arrleft {
+  display: none;
+}

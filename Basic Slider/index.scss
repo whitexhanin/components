@@ -9,11 +9,12 @@
         position:relative;
         width:100%;        
         overflow:hidden;
-        border:1px solid gold;
+        // border:1px solid gold;
 
         .slider-list {
             display:flex;    
-            width:3200px;
+            // width:3200px;
+            width:100%;
             height:500px;    
             transition:transform 150ms ease-in-out;   
         }
@@ -26,6 +27,7 @@
             list-style: none;
             margin:0;
             padding:0;
+            flex:none;
 
             &.n1 {
                 background-color: burlywood;
@@ -81,7 +83,7 @@
         }
         
         .page_num {
-            display:none;
+            // display:none;
             padding-right:20px;
             &.on {
                 display:block;

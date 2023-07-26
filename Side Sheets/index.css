@@ -24,7 +24,7 @@
   background: #1B90FC;
 }
 .switch01.on:before {
-  left: calc(1px);
+  left: 1px;
 }
 
 .btn-switch {
@@ -152,4 +152,4 @@
   width: calc(100% + 7px - 3.7rem);
   gap: 1px;
   margin-left: 1.85rem;
-}
+}/*# sourceMappingURL=index.css.map */

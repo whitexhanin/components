@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* 폰트 */
+@font-face {
+  font-family: "NotoSansKr";
+  src: url("../webfonts/NotoSanskr-B/NotoSanskr-B.woff") format("woff");
+  src: url("../webfonts/NotoSanskr-B/NotoSanskr-B.otf") format("opentype"), url("../webfonts/NotoSanskr-B/NotoSanskr-B.ttf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansKr";
+  src: url("../webfonts/NotoSanskr-M/NotoSanskr-M.woff") format("woff");
+  src: url("../webfonts/NotoSanskr-M/NotoSanskr-M.otf") format("opentype"), url("../webfonts/NotoSanskr-M/NotoSanskr-M.ttf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoSansKr";
+  src: url("../webfonts/NotoSanskr-R/NotoSanskr-R.woff") format("woff");
+  src: url("../webfonts/NotoSanskr-R/NotoSanskr-R.otf") format("opentype"), url("../webfonts/NotoSanskr-R/NotoSanskr-R.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}

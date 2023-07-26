@@ -1,0 +1,476 @@
+
+// Scenario Animation snar01~23
+#content {  
+    .animate {
+        display:none;
+    }      
+    &.snar01,&.snar03 {
+        .animate {
+            display:block;
+        }    
+        .an12,.an13  {
+            display:none;
+        }
+        .an6 ,.an7 ,.an8 , .an9 , .an10 {
+            ._a1 {
+                .arr-y {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arry {
+                    display:none;
+                }
+            }
+
+        }
+    }   
+    &.snar02 {
+        .animate {
+            display:block;
+        }   
+        .an5,.an6 ,.an7 ,.an8 , .an9 , .an10 , .an11 , .an12, .an13{
+            display:none;
+        }            
+    }     
+    &.snar04 ,  &.snar05 , &.snar06 , &.snar07, &.snar08{
+        .animate {
+            display:block;
+        }    
+        .an12,.an13  {
+            display:none;
+        }
+        .an6 ,.an7 ,.an8 , .an9 , .an10 {
+            ._a1 {
+                .arr-y {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arry {
+                    display:none;
+                }
+            }
+
+        }
+    }  
+    &.snar04 {
+        .an6  {
+            display:none;
+        }
+    }
+    &.snar05 {
+        .an7  {
+            display:none;
+        }
+    }
+    &.snar06 {
+        .an8  {
+            display:none;
+        }
+    }
+    &.snar07 {
+        .an9  {
+            display:none;
+        }
+    }
+    &.snar08 {
+        .an10  {
+            display:none;
+        }
+    }  
+    &.snar09 {
+        .animate {
+            display:none;
+        }  
+    }   
+    &.snar10 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6,.an7,.an8,.an9,.an10,.an11,.an13  {
+            display:none;
+        }
+    } 
+    &.snar11 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6,.an7,.an8,.an9,.an10 {
+            display:none;
+        }
+    } 
+    &.snar12 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an7,.an8,.an9,.an10 {
+            display:none;
+        }
+        .an6 {
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+        }
+        
+    } 
+    &.snar13 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an8,.an9,.an10 {
+            display:none;
+        }
+        .an6 ,.an7{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+        }
+    } 
+    &.snar14 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an9,.an10 {
+            display:none;
+        }
+        .an6 ,.an7,.an8{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+        }
+    } 
+    &.snar15 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an10 {
+            display:none;
+        }
+        .an6 ,.an7,.an8,.an9{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+        }
+    } 
+    &.snar16 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5 {
+            display:none;
+        }
+        .an6 ,.an7,.an8,.an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arry {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+
+    &.snar17 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6 ,.an7,.an8,.an9 {
+            display:none;
+        }
+        .an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+    &.snar18 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6 ,.an7,.an8 {
+            display:none;
+        }
+        .an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+    &.snar19 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6 ,.an7 {
+            display:none;
+        }
+        .an8,.an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+    &.snar20 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5,.an6 {
+            display:none;
+        }
+        .an7,.an8,.an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+    &.snar21 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5 {
+            display:none;
+        }
+        .an6,.an7,.an8,.an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+    &.snar22 {
+        .animate {
+            display:block;
+        }  
+        .an1,.an2,.an3,.an4,.an5 {
+            display:none;
+        }
+        .an6,.an7,.an8,.an9,.an10{
+            ._a1 {
+                .arry {
+                    display:none;
+                }
+            }            
+        }
+        .an7,.an8,.an9,.an10 {
+            ._a3 {
+                .arrright {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrright {
+                    display:none;
+                }
+            }
+        }
+
+        .an10  {
+            ._a2 {
+                .arr-y {
+                    display:none;
+                }
+            }
+
+        }
+        .an6 {
+            ._a3 {
+                .arrleft {
+                    display:none;
+                }
+            }
+            ._a4 {
+                .arrleft {
+                    display:none;
+                }
+            }
+
+        }
+    } 
+}

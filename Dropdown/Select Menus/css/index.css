@@ -52,13 +52,10 @@
     background-position: center;
 }  
 .select_div.on .select_sub {
-    padding:1em 0;
-    height:auto;
-    border: 1px solid #2D56F7;                     
+    visibility: visible;
+    opacity: 1;
 }
 .select_sub {    
-    /* overflow:hidden;
-    overflow-y:auto; */
     height:0;
     border:none;
     position:absolute;
@@ -71,11 +68,14 @@
     z-index:1;
     border-radius: 5px;
     background: #16143F;
+    padding:1em 0;
+    height:auto;
+    border: 1px solid #2D56F7;    
+    visibility: hidden;
+    opacity: 0;
 }
 .select_sub >  .inner {
-    /* width:calc(100% + 1em); */
     width: calc(100% - 0.5em);
-    height:105%;
     overflow:hidden;
     overflow-y:auto;
 }

@@ -1,0 +1,21 @@
+
+/* 폰트 */
+
+@mixin font-face($name, $file, $weight) {
+
+    @font-face {    
+        font-family: "#{$name}";
+        src: url('../webfonts/#{$file}/#{$file}.woff') format('woff');            
+        src: 
+        url('../webfonts/#{$file}/#{$file}.otf') format('opentype'),
+        url('../webfonts/#{$file}/#{$file}.ttf') format('opentype');      
+        font-weight: $weight;    
+        font-style: normal;    
+    }
+}
+    
+@include font-face('NotoSansKr', 'NotoSanskr-B', 700);
+@include font-face('NotoSansKr', 'NotoSanskr-M', 500);
+@include font-face('NotoSansKr', 'NotoSanskr-R', 400);
+
+

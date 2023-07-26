@@ -1,4 +1,5 @@
 window.addEventListener('load',function(){
+
     let itemList = document.querySelectorAll('.itemlist button');
     itemList.forEach(element => {
         element.addEventListener('click',itemClick);    
@@ -17,7 +18,6 @@ const itemClick = (e) => {
     let name = target.innerText;
     let iframe = document.querySelector('iframe');
     let active = document.querySelector('.itemlist button.active');    
-    let more = document.querySelector('.more');
     let subList = target.closest('.sublist');
     let targetLi;
     let targetMore;
@@ -27,21 +27,16 @@ const itemClick = (e) => {
     if(!target.classList.contains('more')){
         active.classList.remove('active');
         target.classList.add('active');        
-
-        //타겟이 서브 메뉴 일때 or 아닐때
+        
         if(subList) {
             targetLi = subList.closest('li');
             targetMore = targetLi.querySelector('.more');            
             moreTxt = targetMore.innerText;  
-            iframe.setAttribute('src','../'+ moreTxt+'/'+ name +'/index.html');  
+            iframe.setAttribute('src',`../${moreTxt}/${name}/index.html`);  
         }else{
-            iframe.setAttribute('src','../'+ name +'/index.html');  
-            if(more.classList.contains('open')){
-                more.classList.remove('open');
-            }
+            iframe.setAttribute('src',`../${name}/index.html`);  
+            openReset();            
         }
-
-        
     }    
     
  }
@@ -53,8 +48,21 @@ const itemClick = (e) => {
     if(target.classList.contains('open')){
         target.classList.remove('open');
         subList.style.height = '0';
-    }else {
+    }else {        
+        openReset();          
         target.classList.add('open');
-        subList.style.height = 'calc(48px *'+ subLength+')';
+        subList.style.height = `calc(48px * ${subLength})`;
     }
+ }
+
+ const openReset = () => {
+    let open = document.querySelector('.open');
+    let openSub;
+
+    if(open){
+        openSub = open.closest('li').querySelector('.sublist');
+        open.classList.remove('open');
+        openSub.style.height = '0';   
+    }
+
  }

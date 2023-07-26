@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+*:-moz-read-only {
+  border: none;
+}
+
 *:read-only {
   border: none;
 }
@@ -16,4 +20,4 @@
 }
 .todo-ok input[type=checkbox]:disabled {
   background: gray;
-}
+}/*# sourceMappingURL=index.css.map */

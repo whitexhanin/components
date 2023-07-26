@@ -1,0 +1,129 @@
+.datepicker-picker {
+  gap: 10px;
+  padding: 20px;
+}
+.datepicker-picker .view-switch {
+  color: #161616;
+  font-size: 20px;
+}
+.datepicker-picker .datepicker-controls .button {
+  color: #161616;
+  font-size: 20px;
+}
+.datepicker-picker .datepicker-view {
+  width: 100%;
+}
+.datepicker-picker .dow {
+  height: 32px;
+  width: 32px;
+  background: #F2F4F8;
+  border-radius: 2px 0px 0px 2px;
+  color: #515151;
+  font-size: 11px;
+}
+.datepicker-picker .datepicker-cell {
+  height: 32px;
+  width: 32px;
+  flex: none;
+  color: #525252;
+  font-weight: 400;
+  font-size: 13px;
+}
+.datepicker-picker .datepicker-view.months, .datepicker-picker .datepicker-view.years, .datepicker-picker .datepicker-view.decades {
+  width: calc(59px * 4);
+  gap: 0;
+}
+.datepicker-picker .datepicker-view.months .datepicker-cell, .datepicker-picker .datepicker-view.years .datepicker-cell, .datepicker-picker .datepicker-view.decades .datepicker-cell {
+  width: 59px;
+  height: 59px;
+}
+.datepicker-picker .datepicker-view.months .datepicker-cell.focused:not(.selected), .datepicker-picker .datepicker-view.years .datepicker-cell.focused:not(.selected), .datepicker-picker .datepicker-view.decades .datepicker-cell.focused:not(.selected) {
+  background-color: #e9e9e9;
+}
+.datepicker-picker .datepicker-cell.selected, .datepicker-picker .datepicker-cell.selected:hover,
+.datepicker-picker .datepicker-cell.range-end:not(.selected), .datepicker-picker .datepicker-cell.range-start:not(.selected) {
+  font-weight: 400;
+  font-size: 13px;
+  color: #0F62FE;
+}
+.datepicker-picker .datepicker-cell.range-start:not(.range-end), .datepicker-picker .datepicker-cell.range-end:not(.selected),
+.datepicker-picker .datepicker-cell.range-end.focused:not(.selected), .datepicker-picker .datepicker-cell.range-start.focused:not(.selected),
+.datepicker-picker .datepicker-cell.selected, .datepicker-picker .datepicker-cell.selected:hover {
+  background: #F2F4F8;
+  border: 1px solid #105CF2;
+  border-radius: 0px;
+}
+.datepicker-picker .datepicker-cell.range:not(.disabled):not(.focused):not(.today):hover {
+  background: #F2F4F8;
+}
+.datepicker-picker .datepicker-cell.range {
+  background: #F2F4F8;
+}
+.datepicker-picker .days {
+  gap: 2px;
+}
+
+.datepicker span {
+  border-radius: 0;
+}
+
+.datepicker .days .dow, .datepicker-cell {
+  flex-basis: inherit;
+}
+
+.datepicker-controls .button.view-switch {
+  height: 32px;
+}
+
+.datepicker-controls .button.prev-button,
+.datepicker-controls .button.next-button {
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  background-size: 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  background: url("./img/arr-bk.png") center no-repeat #FFFFFF;
+  background-size: 20px;
+  padding: 0;
+  flex: none;
+}
+
+.datepicker-header .datepicker-controls .button.button.prev-button,
+.datepicker-header .datepicker-controls .button.button.next-button {
+  border: 1px solid #E0E0E0;
+}
+
+.datepicker-controls .next-button {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.datepicker .days .dow, .datepicker-cell {
+  height: 32px;
+  width: 32px;
+  font-weight: 400;
+  flex-basis: inherit;
+}
+
+.datepicker .days-of-week {
+  gap: 2px;
+}
+
+.datepicker-grid {
+  gap: 2px;
+}
+
+.datepicker-footer {
+  background-color: transparent;
+  box-shadow: none;
+}
+.datepicker-footer .datepicker-controls {
+  justify-content: end;
+  gap: 10px;
+}
+
+.datepicker-picker .datepicker-cell.hoday {
+  color: #DF4951;
+  background: #FFF4F5;
+}

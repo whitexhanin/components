@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 카드 나열</title>        
+    <link rel="stylesheet" href="../common/css/reset.css">    
+    <link rel="stylesheet" href="./index.css">       
+    <link rel="stylesheet" href="./cards.css">     
+    <script src="./index.js"></script> 
+</head>
+<body>    
+    <div class="container">         
+        <!-- 슬라이드 -->       
+        <div class="slider-wrap" id="slider03">            
+            <div class="slider-body">
+                <div class="slider-list" index="0"> 
+                    <div class="slider-box">
+                        1번
+                    </div>
+                    <div class="slider-box">    
+                        2번                    
+                    </div>
+                    <div class="slider-box">   
+                        3번                                         
+                    </div>
+                    <div class="slider-box">                        
+                        4번                                          
+                    </div>  
+                    <div class="slider-box">
+                        5번
+                    </div>
+                    <div class="slider-box">    
+                        6번                    
+                    </div>
+                    <div class="slider-box">   
+                        7번                                         
+                    </div>
+                    <div class="slider-box">                        
+                        8번                                          
+                    </div>         
+                </div>        
+                <div class="arrow">
+                    <button class="prev">
+                        <                        
+                        <span class="t-hdn">이전</span>
+                    </button>                                                
+                    <button class="next">
+                        >
+                        <span class="t-hdn">다음</span>
+                    </button>     
+                </div>         
+                <div class="btn-box">   
+                    <div class="dot-wrap" area-hidden="true"></div>                                                           
+                    <span class="page_num">                        
+                        <em class="current">                            
+                        </em>
+                        /
+                        <span class="total"></span>                            
+                    </span>
+                </div>                               
+            </div>            
+        </div>   
+    </div>
+    <script>
+        
+        const sliderSet = [
+            // {
+            //     idNum : '01',
+            //     viewer : 1 ,
+            //     pagination : true,
+            //     option : [
+            //         {
+            //             loop : false,     
+            //             autoplay: false,
+            //             speed: '5000'         
+
+            //         }          
+            //     ]        
+            // },
+            // {
+            //     idNum : '02',
+            //     viewer : 1 ,
+            //     pagination : true,
+            //     option : [
+            //         {
+            //             loop : false,     
+            //             autoplay: false,
+            //             speed: '7000'         
+
+            //         }          
+            //     ] 
+            // },
+            {
+                idNum : '03',    
+                viewer : 6 ,   
+                pagination : false,
+                gap:10,
+                option : [
+                    {
+                        loop : false,     
+                        autoplay: false,
+                        speed: '7000'         
+
+                    }          
+                ]        
+            }
+        ]
+        const sliderUse = new Sliders(sliderSet);
+
+    </script>
+</body>
+</html>

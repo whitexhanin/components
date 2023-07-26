@@ -403,8 +403,7 @@ h1 img {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  height: 60%;
-  /*poi 정보 리스트 높이 스크롤*/
+  height: 60%; /*poi 정보 리스트 높이 스크롤*/
   padding-right: 0.6rem;
   padding-right: 0.6rem;
   margin-right: 0.6rem;
@@ -532,7 +531,7 @@ h1 img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  width: calc(100%);
+  width: 100%;
   margin-top: 1.9rem;
 }
 
@@ -545,4 +544,4 @@ h1 img {
   border-radius: 0.5rem;
   font-size: 1.5rem;
   color: #161616;
-}
+}/*# sourceMappingURL=style.css.map */
