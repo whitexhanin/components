@@ -115,6 +115,12 @@ input:focus-visible {
 }
 .ckbasketpop.on {
   display: flex;
+    /* 텍스트 긁힘 안되게 방지 */
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .ckbasketpop.inpop2 {
   width: 620px;
