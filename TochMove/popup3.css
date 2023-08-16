@@ -8,9 +8,7 @@ html {
 
 body {
   position: relative;
-  min-width: 1330px;
-  height:3000px;
-  background-color: #525252;   
+  min-width: 1330px;    
 }
 body.touchdevice {
   overflow: hidden;
@@ -172,78 +170,6 @@ input:focus-visible {
   height: 390px;
   overflow-y: auto;
 }
-.ckbasketpop .add-list .list {
-  width: 150px;
-  padding: 9px 0;
-}
-.ckbasketpop .add-list .list.n1 {
-  margin-left: 10px;
-}
-.ckbasketpop .add-list .list.n2 {
-  position: relative;
-  margin-left: 32px;
-}
-.ckbasketpop .add-list .list.n2:before {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 100%;
-  top: 0;
-  left: -32px;
-  background: url("../../img/icon16/off/next.png") center no-repeat;
-  background-size: 16px;
-}
-.ckbasketpop .add-list .list.n2 .selt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #F4F4F4;
-}
-.ckbasketpop .add-list .list.n2 .empty {
-  color: #8D8D8D;
-  background: #ffffff;
-  font-size: 12px;
-  border-bottom: none;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-.ckbasketpop .add-list .list.n2.on .selt {
-  display: block;
-  background: #ffffff;
-}
-.ckbasketpop .add-list .list.n2.on .empty {
-  background: #F4F4F4;
-}
-.ckbasketpop .add-list .list.n2.on:before {
-  background-image: url("../../img/icon16/on/next.png");
-  background-size: 16px;
-}
-.ckbasketpop .add-list .list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 26px;
-  padding-left: 4px;
-  border-bottom: 1px solid #E9E9E9;
-  background: #ffffff;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-}
-.ckbasketpop .add-list .list li:hover {
-  background: #F2F4F8;
-}
-.ckbasketpop .add-list .list li.li-unit {
-  gap: 4px;
-  border-bottom: none;
-  padding-left: 0;
-}
-.ckbasketpop .add-list .list li.li-unit input[type=number] {
-  width: 120px;
-}
-.ckbasketpop .add-list .list li.li-unit:hover {
-  background: #ffffff;
-}
 .ckbasketpop .add-list .sd {
   color: #525252;
   font-size: 12px;
@@ -253,12 +179,6 @@ input:focus-visible {
   flex-wrap: wrap;
   background: #F4F4F4;
   padding: 9px;
-}
-.ckbasketpop .div-selected .btn-up {
-  margin-right: 4px;
-}
-.ckbasketpop .div-selected .btn-down {
-  margin-right: 8px;
 }
 .ckbasketpop .div-selected .selted {
   display: flex;
@@ -281,14 +201,11 @@ input:focus-visible {
   -webkit-user-select: none;
   user-select: none;
 }
-.ckbasketpop .selted, .ckbasketpop .selt {
-  margin-top: 10px;
+.ckbasketpop .div-selected .selted li.touchstyle {
+  background:red;
 }
-.ckbasketpop .btn-area {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 40px;
+.ckbasketpop .selted {
+  margin-top: 10px;
 }
 .ckbasketpop .ckbox {
   appearance: none;
@@ -329,73 +246,6 @@ input:focus-visible {
   background-color: #CAD9FE;
   border: 1px solid #CAD9FE;
 }
-.ckbasketpop .titsty {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  background: #F2F4F8;
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  height: 32px;
-  padding: 0 8px;
-  font-size: 13px;
-  min-width: 122px;
-}
-.ckbasketpop .titsty .st {
-  color: #8D8D8D;
-  flex: 0 0 auto;
-}
-.ckbasketpop .titsty .sd {
-  color: #161616;
-  line-height: 1.1;
-}
-.ckbasketpop .titsty .sd {
-  line-height: inherit;
-}
-.ckbasketpop .input-search {
-  width: 176px;
-  height: 32px;
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  padding: 0 5px 0 37px;
-  background: url("../../img/icon20/search.png") left 7px center no-repeat #FFFFFF;
-  background-size: 20px;
-  font-size: 13px;
-  color: #161616;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-}
-.ckbasketpop .input-search:hover {
-  background-color: #F2F4F8;
-}
-.ckbasketpop .input-search:focus {
-  border: 1px solid #105CF2;
-}
-.ckbasketpop .input-search:disabled {
-  background-color: #adaaaa;
-  opacity: 0.3;
-  pointer-events: none;
-}
-.ckbasketpop .input-search::-webkit-search-cancel-button {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: url("../../img/icon14/close.png") center no-repeat;
-  background-size: 14px;
-}
-.ckbasketpop .input1 {
-  width: 150px;
-  height: 30px;
-  font-size: 12px;
-  color: #161616;
-  background: #FFFFFF;
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  padding: 0 10px;
-}
-.ckbasketpop .input1:disabled {
-  background: #E9E9E9;
-}
 .ckbasketpop input[type=number] {
   height: 20px;
   background: #FFFFFF;
@@ -419,120 +269,6 @@ input:focus-visible {
 }
 .ckbasketpop .sd-num input {
   width: 30px;
-}
-.ckbasketpop .user-list {
-  margin: 10px;
-}
-.ckbasketpop .user-list .head {
-  display: grid;
-  grid-template-columns: 98px 98px 144px;
-  grid-template-rows: 26px;
-  position: sticky;
-  top: 0;
-}
-.ckbasketpop .user-list .head > span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  background: #F4F4F4;
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: #C6C6C6;
-  border-right: 1px solid #E9E9E9;
-}
-.ckbasketpop .user-list .head > span:last-child {
-  border-right: none;
-}
-.ckbasketpop .user-list .head > span.txc {
-  text-align: center;
-}
-.ckbasketpop .user-list .body {
-  display: grid;
-  max-height: 390px;
-}
-.ckbasketpop .user-list .body .li-wrap {
-  border-bottom: 1px solid #C6C6C6;
-}
-.ckbasketpop .user-list .body .li-wrap.disabled {
-  background: #F4F4F4;
-  opacity: 0.7;
-}
-.ckbasketpop .user-list .body .li-wrap > .sd {
-  border-right: 1px solid #E9E9E9;
-}
-.ckbasketpop .user-list .body .li-wrap .sd, .ckbasketpop .user-list .body .li-wrap .ck {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  color: #525252;
-  padding: 0 4px;
-}
-.ckbasketpop .user-list .body .li-wrap .sd.txc, .ckbasketpop .user-list .body .li-wrap .ck.txc {
-  justify-content: center;
-}
-.ckbasketpop .user-list .body .li-wrap .sd.txr, .ckbasketpop .user-list .body .li-wrap .ck.txr {
-  justify-content: flex-end;
-}
-.ckbasketpop .user-list .body .li-wrap .sd.ovfhd, .ckbasketpop .user-list .body .li-wrap .ck.ovfhd {
-  overflow: hidden;
-}
-.ckbasketpop .user-list .body .li-wrap .sd.ck, .ckbasketpop .user-list .body .li-wrap .ck.ck {
-  padding: 0;
-  justify-content: center;
-}
-.ckbasketpop .user-list .body .li-wrap .sd .els, .ckbasketpop .user-list .body .li-wrap .ck .els {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li {
-  border-bottom: 1px solid #E9E9E9;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li:last-child {
-  border-bottom: none;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li > span {
-  border-right: 1px solid #E9E9E9;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li > span:last-child {
-  border-right: none;
-}
-.ckbasketpop .user-list .body .li-wrap {
-  display: grid;
-  grid-template-columns: 98px 242px;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side {
-  display: grid;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li {
-  display: grid;
-  grid-template-rows: 26px;
-  grid-template-columns: 98px 144px;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li:last-child {
-  border-bottom: none;
-}
-.ckbasketpop .user-list .body .li-wrap .ul-side > li > span {
-  display: flex;
-  align-items: center;
-}
-.ckbasketpop .user-list .body .li-wrap .sd {
-  font-size: 12px;
-  color: #525252;
-  padding: 0 4px;
-}
-.ckbasketpop .user-list .body .li-wrap .ck {
-  display: flex;
-  align-items: center;
-}
-.ckbasketpop .user-list .body .li-wrap.inputmode input {
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #525252;
-  font-size: 12px;
 }
 .touchzone1,.touchzone2 {
   position:relative;
