@@ -3,7 +3,6 @@ window.addEventListener('load', function () {
     const touchMove1 = new TouchMove('touchzone1');
     const touchMove2 = new TouchMove('touchzone2');    
 
-
 });
 
 function TouchMove(name) {
