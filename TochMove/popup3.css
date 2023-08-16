@@ -9,6 +9,7 @@ html {
 body {
   position: relative;
   min-width: 1330px;
+  height:200vh;
 }
 
 .container {
