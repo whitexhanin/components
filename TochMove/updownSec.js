@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
 
 function TouchMove(name) {
 
+    let body = document.querySelector('body');
     let touchZone = document.querySelector('.'+ name);
     let touchItem = touchZone.querySelectorAll('li');      
     let eMoveY = []; 
@@ -38,6 +39,8 @@ function TouchMove(name) {
 
             timer = setTimeout(() => {
                 eTarget.style.background = 'red';
+                //NO PTR                 
+                body.classList.add('touchdevice');
             },700);
 
             if(Math.abs(timerStamp[0]-timerStamp[1]) < 700){
@@ -139,6 +142,8 @@ function TouchMove(name) {
                     near(eTarget , eMoveY , name);                             
                 }
                 // moveBool = 2;     
+
+                
             }
             console.log(moveBool);
                        
@@ -152,6 +157,7 @@ function TouchMove(name) {
                 eTarget.style.position = 'static';
                 eTarget.style.top = 'initial';  
                 eTarget.style.background = 'initial';
+                body.classList.remove('touchdevice');
     
                 touchItem.forEach(element => {
                     element.style.marginTop = '0px';
@@ -169,6 +175,9 @@ function TouchMove(name) {
 
             timerStamp = [];
             clearTimeout(timer);
+            
+            
+
 
         }); 
 
