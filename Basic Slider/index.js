@@ -5,14 +5,13 @@ function Sliders (sliderSet) {
 
     let regex = /[^0-9]/gi;
     let sliderWrap;
-    let autoPlaying;
+    let autoplaying;
 
     //Slider SetInterval Code
     const sliderInterval = (idNum , autoplay) => {    
         Slider = document.querySelector(`#slider${idNum}`);    
         num = Slider.querySelector('.slider-list').getAttribute('index');
-        sLength = Slider.querySelector('.slider-list').childElementCount;        
-        Slider.setAttribute('data-auto',autoplay);
+        sLength = Slider.querySelector('.slider-list').childElementCount;                
 
             if(num <= sLength-2){      
                 btnNext(Slider);        
@@ -20,21 +19,19 @@ function Sliders (sliderSet) {
             else{            
                 clearInterval(`interval${idNum}`);                       
             }   
-    }
-    
+    }    
 
     //Slider list length
     const sliderLength = (e , sArea) => {    
-        
         let slider = sArea;
         let sliderList = slider.querySelector('.slider-body .slider-list');
         let child =  sliderList.childElementCount;
         let sliderBox = sliderList.querySelectorAll('.slider-box');    
         let next = slider.querySelector('.arrow .next');   
         let count = sliderList.attributes.index.value; 
-        
         let sAreaId = sArea.getAttribute('id').replace(regex, "");
         let view;
+
         sliderSet.map(arr => {
             if(arr.idNum == sAreaId){            
                 view = arr.viewer;                
@@ -53,8 +50,7 @@ function Sliders (sliderSet) {
         }
         if(child <= view){
             next.classList.remove('on');   
-        }        
-
+        }      
     }
 
     //SliderUl width
@@ -76,9 +72,9 @@ function Sliders (sliderSet) {
         });   
 
         sliderBox.forEach(element => {
-            element.style.width = (boxWidth) + 'px';
+            element.style.width = (sliderBody) + 'px';
         });           
-        sliderList.style.width = ((boxWidth + gap) * length) + 'px';
+        sliderList.style.width = ((sliderBody + gap) * length) + 'px';
         sliderList.style.gap = `${gap}px`;
 
     }
@@ -164,6 +160,7 @@ function Sliders (sliderSet) {
         }    
 
     }
+
     const sliderDotEvent = (index, sArea) => {     
         let count = index;
         let dotWrap = sArea.querySelector('.dot-wrap');        
@@ -270,6 +267,54 @@ function Sliders (sliderSet) {
         sliderList.style.transform = 'translateX('+ ('-'+(boxWidth + gap) * count) + 'px)';
     }
 
+    // Mouse SetInterval Control    
+    const stopInterval = (e) => {
+        sliderWrap = e.target.closest('.slider-wrap');
+
+        if(sliderWrap){           
+            autoplaying =  sliderWrap.getAttribute('data-auto');
+            if(autoplaying){                                   
+                idNum = sliderWrap.getAttribute('id').replace(regex, "");
+                clearInterval(window[`interval${idNum}`]);          
+            }
+        }    
+    }
+
+    const startInterval = (e) => {
+        sliderWrap = e.target.closest('.slider-wrap');
+
+        if(sliderWrap){ 
+            autoplaying = sliderWrap.getAttribute('data-auto');
+            if(autoplaying){                      
+                idNum = sliderWrap.getAttribute('id').replace(regex, "");
+                window[`interval${idNum}`] = setInterval(sliderInterval,5000, `${String(idNum)}`,true);
+            }
+        }     
+    }
+
+    let scrXStr;
+    const touchstart = (e) => {
+        scrXStr = e.changedTouches[0].screenX;   
+        stopInterval(e);
+    }
+    const touchMove = (e) => {    
+        stopInterval(e);
+    }
+    const touchEnd = (e) => {   
+        let scrXEnd = e.changedTouches[0].screenX;
+        let sliderList = e.currentTarget.querySelector('.slider-list');
+        let count = sliderList.attributes.index.value;
+        let length = sliderList.childElementCount - 1;
+
+        if(scrXStr > scrXEnd && count < length) {
+            btnNext(e);
+            startInterval(e);
+        }else if(scrXStr < scrXEnd && count  > 0){        
+            btnPrev(e);
+            startInterval(e);
+        }   
+    }
+
 
     //Event
     let sliderArea = document.querySelectorAll('.slider-wrap');
@@ -277,7 +322,7 @@ function Sliders (sliderSet) {
 
     sliderArea.forEach(ele => {
         let idName = ele.getAttribute('id');
-        sliderName.push(idName);        
+        sliderName.push(idName);              
     });
 
     let Slider;   
@@ -290,7 +335,7 @@ function Sliders (sliderSet) {
         sliderLength(bin,Slider);
         sliderWidth(bin,Slider);    
 
-        Slider.setAttribute('data-num','1');       
+        // Slider.setAttribute('data-num','1');             
         
     }); 
     
@@ -311,40 +356,44 @@ function Sliders (sliderSet) {
     next.forEach(element => {
         element.addEventListener('click',btnNext);    
     });
+    
 
     //Slider SetInterval Function 
-    sliderSet.forEach(slider => {                   
-        if(slider.option[0].autoplay){
-            window[`interval${slider.idNum}`] = setInterval(sliderInterval,slider.option[0].speed,slider.idNum,slider.option[0].autoplay);  
+    sliderSet.forEach(slider => {       
+
+        Slider = document.querySelector(`#slider${slider.idNum}`);                          
+
+        if(slider.option[0].autoplay){            
+            window[`interval${slider.idNum}`] = setInterval(sliderInterval,slider.option[0].speed,slider.idNum,slider.option[0].autoplay);              
         }
+        Slider.setAttribute('data-auto',slider.option[0].autoplay); 
+    });   
+
+    window.addEventListener('mouseover',stopInterval);   
+    window.addEventListener('mouseout',function(e){        
+        startInterval(e);      
+    });    
+    
+    sliderArea.forEach(element => {
+        element.addEventListener('touchstart',touchstart);
+        element.addEventListener('touchmove',touchMove);
+        element.addEventListener('touchend',touchEnd);        
     });
 
-    // Mouse SetInterval Control
-    window.addEventListener('mouseover',function(e){    
-        sliderWrap = e.target.closest('.slider-wrap');
+    window.addEventListener('resize',function(e){
 
-        if(sliderWrap){           
-            autoplaying =  sliderWrap.getAttribute('data-auto');
-            if(autoplaying){                        
-                idNum = sliderWrap.getAttribute('id').replace(regex, "");
-                clearInterval(window[`interval${idNum}`]);
-            }
-        }    
-    });
-    window.addEventListener('mouseout',function(e){
-        sliderWrap = e.target.closest('.slider-wrap');
+        sliderArea.forEach(ele => {            
+            let sliderList = ele.querySelector('.slider-body .slider-list');            
+            let count = sliderList.attributes.index.value;    
 
-        if(sliderWrap){ 
-            autoplaying = sliderWrap.getAttribute('data-auto');
-            if(autoplaying){                      
-                idNum = sliderWrap.getAttribute('id').replace(regex, "");
-                window[`interval${idNum}`] = setInterval(sliderInterval,5000, `${String(idNum)}`);
-            }
-        }
+            sliderWidth(bin,ele);    
+            moveTo(count , ele);         
+        });
         
     });
-
 }
+
+
 
 
 

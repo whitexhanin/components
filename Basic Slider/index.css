@@ -1,6 +1,6 @@
 .slider-wrap {
   position: relative;
-  width: 800px;
+  width: 80%;
 }
 .slider-wrap .slider-body {
   position: relative;
@@ -12,10 +12,11 @@
   width: 100%;
   height: 500px;
   transition: transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
 }
 .slider-wrap .slider-body .page {
   display: flex;
-  width: 800px;
+  width: 100%;
   height: 500px;
   flex-wrap: wrap;
   list-style: none;
@@ -30,9 +31,8 @@
   background-color: cornflowerblue;
 }
 .slider-wrap .slider-body .page li {
-  width: 200px;
   height: 250px;
-  flex: 0 0 200px;
+  flex: 1 1 calc(100%/4);
 }
 .slider-wrap .slider-body .page li:nth-of-type(odd):nth-of-type(-1n+4) {
   background-color: darkslateblue;
@@ -51,8 +51,9 @@
   left: 50%;
   top: 50%;
   display: flex;
-  gap: 2px;
+  gap: 12px;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 .slider-wrap .btn-box .dot-wrap a {
   width: 10px;
@@ -80,6 +81,7 @@
   font-size: 50px;
   text-decoration: none;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 .slider-wrap .arrow .prev.on, .slider-wrap .arrow .next.on {
   display: inline-block;
@@ -91,4 +93,15 @@
 .slider-wrap .arrow .next {
   top: 50%;
   right: 0;
-}/*# sourceMappingURL=index.css.map */
+}
+
+@media (any-pointer: coarse) {
+  .arrow {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .btn-box {
+    pointer-events: none;
+  }
+}

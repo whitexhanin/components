@@ -1,0 +1,252 @@
+@use './mixins';
+.Select {
+    position: relative;
+    &.floor {
+        position:absolute;
+        right:30px;
+        bottom:20px;
+        background: #222b80;
+        border-radius: 5px;              
+    
+      .anifloor {
+        position: absolute;
+        bottom: 13px;
+        left: 15px;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        .p1 {
+          width: 14px;
+          height: 14px;
+          background: #ffffff;
+          border-radius: 2px;
+          transform: rotate(-65deg) rotate3d(1, 1, 1, 0deg)
+            matrix(-0.1, 1, 1, 1, 2, 0);
+          -webkit-transform: rotate(-65deg) rotate3d(1, 1, 1, 0deg)
+            matrix(-0.1, 1, 1, 1, 2, 0);
+          margin-bottom: -10px;
+          transition: 0.6s;
+          position: relative;
+          z-index: 1;
+        }
+        .p2 {
+          width: 14px;
+          height: 14px;
+          background: #222b80;
+          border: 2px solid #ffffff;
+          border-radius: 3px;
+          transform: rotate(-65deg) rotate3d(1, 1, 1, 0deg)
+            matrix(-0.1, 1, 1, 1, 0, 1);
+          -webkit-transform: rotate(-65deg) rotate3d(1, 1, 1, 0deg)
+            matrix(-0.1, 1, 1, 1, 0, 1);
+          margin-bottom: -10px;
+          transition: 0.6s;
+          position: relative;
+          z-index: 0;
+        }
+        .p3 {
+          width: 14px;
+          height: 14px;
+          background: #222b80;
+          border: 2px solid #ffffff;
+          border-radius: 3px;
+          transform: rotate(-65deg) matrix(-0.1, 1, 1, 1, -2, 1)
+            rotate3d(1, 1, 1, 0deg);
+          -webkit-transform: rotate(-65deg) matrix(-0.1, 1, 1, 1, -2, 1)
+            rotate3d(1, 1, 1, 0deg);
+          transition: 0.9s;
+          position: relative;
+          z-index: -1;
+        }
+      }
+      &.on {
+        border-radius: 0 0 5px 5px;
+        .p1 {
+          margin-bottom: 4px;
+          transform: rotate(-65deg) rotate3d(1, 1, 1, 360deg)
+            matrix(-0.1, 1, 1, 1, 4, 0);
+        }
+        .p2 {
+          margin-bottom: 2px;
+          transform: rotate(-65deg) rotate3d(1, 1, 1, 360deg)
+            matrix(-0.1, 1, 1, 1, 2, 1);
+        }
+        .p3 {
+          margin-bottom: 0px;
+          transform: rotate(-65deg) matrix(-0.1, 1, 1, 1, -2, 1)
+            rotate3d(1, 1, 1, 360deg);
+        }
+      }
+      > .pick {
+        background: transparent;
+        padding: 0 14px 0 42px;
+        position: relative;
+        z-index: 2;
+        .txt {
+          font-size: 14px;
+          font-weight: 700;
+          padding-left: 2px;
+        }
+        .arrow {
+          width: 8px;
+          height: 6px;
+          background-image: url('../../img/icon10/default/arr4.png');
+          background-size: 8px 6px;
+        }
+      }
+      .select_sub {
+        top: inherit;
+        bottom: 100%;
+        .inner {
+          background: #222b80;
+          border-radius: 5px 5px 0 0;
+          border: 1px solid #1b48ba;
+          border-color: #0697ff;
+          padding: 0 12px 0 42px;
+          border-bottom: none;
+          li {
+            padding-left: 2px;
+            border-bottom: 1px solid #ffffff1a;
+            .txt {
+              font-size: 14px;
+              font-weight: 700;
+              transition: 0.3s;
+            }
+            &:last-child {
+              // border-bottom:none;
+            }
+            &:hover {
+              background: transparent;
+              .txt {
+                color: #0697ff;
+              }
+            }
+            &.on {
+              background: transparent;
+              .txt {
+                color: #0697ff;
+              }
+            }
+          }
+        }
+      }
+      &.on {
+        > .pick {
+          border-top-color: transparent;
+          border-radius: 0px 0px 5px 5px;
+          .arrow {
+            background-image: url('../../img/icon10/on/arr4.png');
+          }
+        }
+      }
+      &:hover {
+        > .pick {
+          .arrow {
+            background-image: url('../../img/icon10/on/arr4.png');
+          }
+        }
+      }
+    }
+  
+    > .pick {
+      display: flex;
+      align-items: center;
+  
+      height: 44px;
+      border: 1px solid #1b48ba;
+      border-radius: 5px;
+      background: #101a71;
+      padding: 0 16px;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+  
+      .txt {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 13px;
+      }
+      .arrow {
+        display: flex;
+        margin-left: auto;
+        width: 24px;
+        height: 24px;
+        background: url('../../img/icon24/default/list_down.png') center no-repeat;
+        background-size: 24px;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+      }
+    }
+    &:hover {
+      > .pick {
+        border-color: #0697ff;
+      }
+    }
+    &.on {
+      > .pick {
+        border-color: #0697ff;
+        .arrow {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+        }
+      }
+      .select_sub {
+        display: block;
+      }
+    }
+    &.disabled {
+      > .pick {
+        border-color: #1b1a63;
+        pointer-events: none;
+      }
+    }
+    &.unable {
+      pointer-events: none;
+    }
+    .select_sub {
+      display: none;
+      border: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      .inner {
+        width: calc(100%);
+        overflow: hidden;
+        overflow-y: auto;
+        border-radius: 5px;
+        background: #101a71;
+        max-height: 196px;
+        li {
+          display: flex;
+          align-items: center;
+          height: 44px;
+          padding: 0 16px;
+          background: transparent;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            background: #0697ff;
+          }
+          &.on {
+            background: #0697ff;
+          }
+          .txt {
+            color: #fff;
+            font-size: 13px;
+          }
+        }
+      }
+    } 
+    &.w152 {
+      @include mixins.select(152px);
+    }   
+  }
+  

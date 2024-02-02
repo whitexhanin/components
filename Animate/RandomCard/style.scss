@@ -1,0 +1,84 @@
+.randomcard-wrap {    
+    display:flex;
+    justify-content: center;
+    perspective: 500px;    
+    gap:0px;
+    transition:gap 1s ease-in-out;
+    &:hover {
+        gap:80px;
+        li {  
+            transform:rotateY(180deg);
+            &:nth-child(1) {                
+                left:-90px;                
+            }
+            &:nth-child(2) {                
+                left:-60px;                
+            }
+            &:nth-child(3) {
+                left:-30px;                
+            }
+            &:nth-child(4) {
+                left:-0px;                
+            }     
+            .front {
+                z-index:0;
+            }
+            .back {
+                z-index:1;
+            }
+        }        
+    }
+    li {
+        position:relative;
+        width:100px;
+        height:200px;        
+        border:1px solid turquoise;
+        font-size:20px;             
+        transform-style: preserve-3d;        
+        transition-property: all; 
+        transition-duration: 0.7s;
+        transition-delay: 0.8s;
+        transition-timing-function: ease-in-out;
+        left:0; 
+        transform:rotateY(0);
+        -webkit-transform:rotateY(0);
+
+        &:nth-child(1) {
+            z-index:0; 
+            left:0;
+        }
+        &:nth-child(2) {
+            z-index:1;
+            left:-80px;
+        }
+        &:nth-child(3) {
+            z-index:2;
+            left:calc(-80px * 2);
+        }
+        &:nth-child(4) {
+            z-index:3;
+            left:calc(-80px * 3);            
+        }       
+        .front {           
+            position:absolute;
+            top:0;
+            left:0;
+            background:#fff;
+            z-index:1;
+            width:100%;
+            height:100%;
+            backface-visibility: hidden;
+        }
+        .back {
+            position:absolute;
+            top:0;
+            left:0;
+            background:teal;
+            z-index:0;  
+            width:100%;
+            height:100%;        
+            backface-visibility: hidden;  
+            transform:rotateY(180deg);
+        }
+    }
+}

@@ -129,6 +129,7 @@
                         </ul>   
                     </div>                          
                 </div>        
+                <!-- 터치 기종 에서는 arrow 사용 안함.display none -->
                 <div class="arrow">
                     <button class="prev">
                         <                        
@@ -162,7 +163,7 @@
                     {
                         loop : false,     
                         autoplay: true,
-                        speed: '5000'         
+                        speed: '3000'         
 
                     }          
                 ]        
@@ -183,6 +184,11 @@
             }
         ]
         const sliderUse = new Sliders(sliderSet);
+
+        if(window.matchMedia("(pointer: coarse)").matches) {
+    // touchscreen
+    console.log('touch');
+}
 
     </script>
 </body>

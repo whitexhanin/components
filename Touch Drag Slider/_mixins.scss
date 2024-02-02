@@ -1,0 +1,285 @@
+@mixin popSty1 {
+    background: #E5F6F2;    
+    .popup1-h3 {
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        height:85px;        
+        color: #008963;
+        font-size: 30px;
+        font-weight: 700;        
+    }
+    .popup1-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;    
+        width:100%;
+        height:calc(100% - 85px);
+        padding-bottom:15px;
+        border-radius: 30px 30px 0px 0px;
+        background: #FFF;
+        box-shadow: 0px -5px 50px 0px rgba(37, 212, 163, 0.20);        
+    }
+}
+@mixin cardSty1{
+    padding:0 15px 15px;
+    border-radius: 20px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05);      
+    &.success {
+        border: 2px solid  #008963;
+    }
+}
+
+@mixin checkbox($cirsize,$bgsize) {    
+    -webkit-appearance: none;
+    width:$cirsize;
+    height:$cirsize;
+    background:url('./img/icon20/default/check.svg') center no-repeat #FFFFFF;
+    background-size:$bgsize;
+    border:2px solid #1F1F1F;
+    border-radius: 50%;
+    flex:0 0 $cirsize;
+    &:checked {
+        background-image: url('./img/icon20/on/check.svg');
+        background-color: #444444;
+        background-size:$bgsize;
+    }
+}
+@mixin checkdo($fontsize,$bgsize ,$gap) {
+    display:flex;    
+    align-items:center;
+    color:#1F1F1F;
+    font-size:$fontsize; 
+    gap:$gap;
+    &.top {
+        align-items:flex-start;
+    }
+    &.err {
+        color:#DC0000;
+        .ckinput {
+            border:2px solid #DC0000;
+            background-image: url('./img/icon20/err/check.svg');
+            background-color: #FFFFFF;
+            background-size:$bgsize;
+            &:checked {
+                background-image: url('./img/icon20/on/check.svg');
+                background-color: #444444;
+                background-size:$bgsize;
+            }
+        }
+    }
+}
+@mixin signbox {
+
+}
+@mixin assentSty{
+    flex: 1 1 230px;
+    padding:0 42px; 
+    h4 {
+        display:flex;
+        align-items:center;
+        height:40px;
+        line-height:1.1;
+        font-size: 20px;        
+        font-weight: 700;
+        color: #000;
+        letter-spacing: -0.4px;
+        margin-bottom:3px;        
+    }
+    hr {
+        margin:0;
+        border-radius: 3px;
+        background: #1F1F1F;
+    }
+    .assent-textarea {
+        padding:0px 0 20px;
+        line-height:1.4;
+        color: #666;
+        font-size: 14px;
+        margin-top:20px;
+        .tit {
+            color: #1F1F1F;
+        }
+    }
+}
+@mixin btnSty1 {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid  #13BE9E;
+    background: #FFF;
+    color:  #13BE9E;    
+    font-size: 20px;
+    font-weight: 700;
+}
+@mixin btnSty2 {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px;    
+    background: #13BE9E;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+@mixin btnSty3{
+    display:block;
+    height:30px;
+    line-height:30px;
+    color:#666;
+    text-align:center;
+    padding: 0px 15px;
+    border-radius: 5px;
+    border: 1px solid  #959595;
+    background: #FFF;
+    font-weight: 700;
+}
+@mixin btnSty4($icon){
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:50px;
+    height:50px;
+    background:url('./img/icon20/default/#{$icon}.svg') center no-repeat #13BE9E;
+    background-size:24px;    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+}
+@mixin dropdown1($width) {
+    width: $width;
+    > .pick {
+      width: $width;
+    }
+}
+@mixin dropdown2($width1,$width2) {
+    width: $width1;
+    > .pick {
+        width: $width1;
+        
+    }
+    .dropdown_sub {
+        width: $width2;
+    }
+}
+@mixin iconArr14($name) {
+    width: 14px;
+    height: 14px;
+    flex:none;
+    background-image: url('./img/icon14/#{$name}.svg');
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+@mixin popup1Btnslayout {
+    display:flex;
+    gap:10px;
+    padding:0 30px;
+}
+@mixin phoneInputWrap ($width,$height , $inputwidth, $col: false) {
+    .phoneinput-wrap {              
+        display:flex;
+        width:$width;              
+        height:$height;
+        flex:0 1 $width;  
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+        background: #F2F2F2;
+        pointer-events: none;
+        @if $col {  
+            flex:0 0 $height;  
+        }  
+        .phoneinput {
+            position:relative;
+            flex:1 0 $inputwidth;            
+            height:100%;
+            overflow:hidden;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            > input {   
+                position:relative;                     
+                width:100%;
+                height:100%;                
+                padding:10px;
+                background: transparent;
+                border-color: transparent;
+                color: #1F1F1F;
+                font-size: 20px;
+                z-index:1;
+                &::placeholder {
+                    color:transparent;
+                }
+                &:placeholder-shown + .text-box .text-placeholder {                            
+                    display:flex;
+                }                        
+            }
+            .text-box {
+                position:absolute;
+                top:0;
+                left:0;
+                display:flex;
+                align-items:center;                        
+                width:100%;
+                height:100%;
+                padding-left:10px;                        
+                background:#fff;
+                z-index:0;
+                .text-placeholder {
+                    display:none;
+                    color:#D9D9D9;                    
+                    font-size: 0px;
+                    &:after {
+                        content:'*** **** ****';
+                        color:#D9D9D9;                    
+                        font-size: 20px;
+                    }
+                }
+                .text-err {
+                    display:none;
+                    color:  #DC0000;
+                    font-size: 20px;
+                }
+            }
+        }
+        &.err {
+            border-color:#DC0000;
+            input:placeholder-shown + .text-box .text-placeholder {
+                display:none;
+            }
+            .text-box {                       
+                .text-err {
+                    display:flex;
+                }
+            }                    
+        }
+    }
+}
+@mixin qr($width,$height) {
+    position:relative;
+    width:$width;
+    height:$height;
+    flex:none;
+    background:url('./img/icon20/default/qr.svg') center no-repeat;
+    background-size:100%;
+    // .qr-img {
+    //     position:absolute;
+    //     top:50%;
+    //     left:50%;
+    //     width:calc(100% - #{$margin});
+    //     height:calc(100% - #{$margin});
+    //     background:url('../../img/test/qr.png') center no-repeat;
+    //     background-size:contain;
+    //     transform:translate(-50%,-50%);
+    //     -webkit-transform:translate(-50%,-50%);
+    // }
+
+
+
+}
+
+
+
+
+

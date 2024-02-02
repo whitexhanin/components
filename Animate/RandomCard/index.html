@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Card</title>
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <ul class="randomcard-wrap">
+        <li>
+            <div class="front">앞면</div>
+            <div class="back">
+                <span class="tit">1번</span>
+                <span class="name"></span>
+            </div>            
+        </li>
+        <li>
+            <div class="front">앞면</div>
+            <div class="back">
+                <span class="tit">2번</span>
+                <span class="name"></span>
+            </div>             
+        </li>
+        <li>
+            <div class="front">앞면</div>
+            <div class="back">
+                <span class="tit">3번</span>
+                <span class="name"></span>
+            </div>             
+        </li>
+        <li>
+            <div class="front">앞면</div>
+            <div class="back">
+                <span class="tit">4번</span>
+                <span class="name"></span>
+            </div>             
+        </li>
+    </ul>    
+    <script>
+
+        let indexArr = [];
+
+        for(let i = 0; i < 6; i++){
+
+            let num = Math.floor((Math.random()*6) + 1);
+
+            if(indexArr.indexOf(num) === -1){
+                indexArr.push(num);
+            }else{
+                --i;
+            }    
+            console.log(indexArr);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <link rel="stylesheet" href="../../common/css/reset.css">  
+    <link rel="stylesheet" href="./index.css">   
+</head>
+<script>
+    window.addEventListener('load',function(){
+        //체크박스 전체
+        let ckall = document.querySelectorAll('.ckall');
+
+        ckall.forEach(element => {        
+            element.addEventListener('change',ckAllEvent);
+        });
+
+        //체크박스 하위 자식
+        let ck = document.querySelectorAll('.ck-list .ckitem');        
+        ck.forEach(element => {        
+            element.addEventListener('change',ckEvent);                
+
+        });
+
+        //장비표시 버튼
+        let btnPoimenu = document.querySelector('.btn_poimenu');
+        btnPoimenu.addEventListener('click',btnPoiOpen);
+
+    })
+
+
+    const btnPoiOpen = (e) => {
+        e.preventDefault();
+
+        let target = e.currentTarget;
+        let parent = target.parentElement;
+
+        parent.classList.toggle('on');
+        target.classList.toggle('on');
+    }
+
+    const ckAllEvent = (e) => {        
+    let target = e.currentTarget;
+    let targetck = target.querySelector('.input-all');
+    let ckBox = target.closest('.ck-area');
+    let ckAll = ckBox.querySelectorAll('.ck-list .input-ck');            
+        
+    if(targetck.checked == true){
+        ckAll.forEach(element => {
+            element.checked = true;    
+        });        
+    }else{
+        ckAll.forEach(element => {
+            element.checked = false;    
+        });   
+    }   
+    ckActive();
+}
+
+
+const ckEvent = (e) => {
+    let target = e.currentTarget;
+    let ckBox = target.closest('.ck-area');
+    let ckAll = ckBox.querySelector('.ckall .input-all');
+    let cklist = ckBox.querySelectorAll('.ck-list .input-ck');    
+    let checkCount = 0;
+
+        cklist.forEach(function(v) {
+            if(v.checked === false){
+                checkCount++;
+            }
+        });
+
+        if(checkCount > 0) {
+            ckAll.checked = false;        
+        } else if(checkCount === 0) {
+            ckAll.checked = true;
+        } 
+    
+
+    ckActive();
+
+}
+const ckActive = (e) => {
+    // 체크박스 없을때 버튼 비활성화/활성화
+    let Inputck = document.querySelectorAll('.cctv-list .input-ck');
+    
+    let checkCount = 0;   
+
+    Inputck.forEach(function(v) {
+
+        if(v.checked === true){
+            
+            checkCount++;
+        }
+    });
+ 
+}
+      
+</script>   
+<body style="position:relative";>
+    <div class="poi-wrap-ab">
+        <div class="poi-wrap ck-area">
+            <!-- btn_poimenu클릭 시 on 추가  -->
+            <button class="btn_poimenu">
+                <span class="icon"></span>
+                <span class="txt">장비표시</span>
+            </button>
+            <ul class="sub-poi ck-list">
+                <!-- li 클릭 시 on 추가 -->
+                <li class="poi01 ckall">
+                    <input type="checkbox" class="input-all" name="" id="ck1-all">
+                    <label for="ck1-all">
+                        <span class="icon"></span>
+                        <span class="txt">전체</span>
+                    </label>                    
+                </li>
+                <li class="poi02 ckitem">
+                    <input type="checkbox" class="input-ck" name="" id="ck1-1" checked>
+                    <label for="ck1-1">
+                        <span class="icon"></span>
+                        <span class="txt">장비1</span>
+                    </label>                    
+                </li>
+                <li class="poi03 ckitem">
+                    <input type="checkbox" class="input-ck" name="" id="ck1-2">
+                    <label for="ck1-2">
+                        <span class="icon"></span>
+                        <span class="txt">장비2</span>
+                    </label>                    
+                </li>                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

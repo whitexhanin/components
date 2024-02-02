@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Touch Drag Slider</title>
+    <link rel="stylesheet" href="../common/css/reset.css" />
+    <link rel="stylesheet" href="./_dropdown.css" />
+    <link rel="stylesheet" href="./_section-caddy.css" />
+    <script src="./slider/index_pbl.js"></script>
+    <script src="./dropdown/index_pbl.js"></script>    
+</head>
+<body>
+    <!-- Caddy -->
+    <section class="section-caddy">
+        <div class="ymdtime">
+            <span class="ymd">
+                <span class="yy">2023</span>
+                <span class="mm">12</span>
+                <span class="dd">25</span>
+                <span>
+                    (
+                        <span>Fri</span>
+                    )
+                </span>
+            </span>
+            <span class="time">
+                11:23
+            </span>
+        </div>
+        <div class="tit-wrap">
+            <span class="tit">
+                <span>
+                    Today’s Game Information for 
+                    <span class="bold">John</span>
+                    .
+                </span>                        
+                <div class="recall-wrap">
+                    <button class="btn-recall"></button>
+                    <span class="txt">
+                        <span class="circle left">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span>                                
+                        <span class="word">Double-checking the game information</span>
+                        <span class="circle">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </span> 
+                    </span>
+                </div>
+            </span>                    
+        </div>                
+        <div class="slider-wrap slider-drag" id="slider16">            
+            <div class="slider-body">
+                <div class="slider-list" index="0"> 
+                    <div class="slider-box active">            
+                        <!--  게임 종료 팀 일때 end -->                      
+                        <!--  게임 시작 가능 팀 일때 now -->
+                        <!-- end OR now OR 상태값 없음에 따라 
+                            버튼 (button 'start' OR button 'scoreboard') 활성화 상태 다름
+                        -->
+                        <div class="slider-page playcard  end">                                    
+                            <span class="time">11:20</span>
+                             <button class="btn-comp">
+                                <span class="txt">
+                                    <span>COMP</span>
+                                </span>
+                             </button>
+                            <div class="section playersection">
+                                <span class="tit">
+                                    <span>4</span>
+                                    <span>Players</span>                                            
+                                </span>
+                                <ul class="scroll">
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>NakataNakataNakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 그룹이 있으면 on 있음, 그룹 없으면 on 없음-->
+                            <div class="section group on">
+                                <span class="tit">Group</span>
+                                <ul>
+                                    <li>                                                
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="btnhalf-wrap">
+                                <li>
+                                    <span class="tit">1st half</span>                                                                                        
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                                <li>
+                                    <span class="tit">2nd half</span>                                            
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                            </ul>
+                            <button class="btn-sty8 js-btn-start">Start</button>
+                            <button class="btn-sty8 btn-scoreboard" data-join="scoreboard">Score Board</button>
+                        </div>                                              
+                    </div>
+                    <div class="slider-box active">  
+                        <div class="slider-page playcard now">
+                            <span class="time">11:20</span>
+                             <button class="btn-comp">
+                                <span class="txt">
+                                    <span>COMP</span>
+                                </span>
+                             </button>
+                            <div class="section playersection">
+                                <span class="tit">
+                                    <span>5</span>
+                                    <span>Players</span>
+                                </span>
+                                <ul class="scroll">
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>NakataNakataNakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section group on">
+                                <span class="tit">Group</span>
+                                <ul>
+                                    <li>                                                
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="btnhalf-wrap">
+                                <li>
+                                    <span class="tit">1st half</span>                                            
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                                <li>
+                                    <span class="tit">2nd half</span>
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                            </ul>
+                            <button class="btn-sty8 js-btn-start">Start</button>
+                            <button class="btn-sty8 btn-scoreboard" data-join="scoreboard">Score Board</button>
+                        </div>                                              
+                    </div>  
+                    <div class="slider-box active">  
+                        <div class="slider-page playcard">
+                            <span class="time">11:20</span>
+                             <button class="btn-comp">
+                                <span class="txt">
+                                    <span>COMP</span>
+                                </span>
+                             </button>
+                            <div class="section playersection">
+                                <span class="tit">
+                                    <span class="tit">
+                                        <span>1</span>
+                                        <span>Players</span>
+                                    </span>
+                                </span>
+                                <ul class="scroll">
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section group">
+                                <span class="tit">Group</span>
+                                <ul>
+                                    <li>                                                
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="btnhalf-wrap">
+                                <li>
+                                    <span class="tit">1st half</span>                                            
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                                <li>
+                                    <span class="tit">2nd half</span>
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                            </ul>
+                            <button class="btn-sty8 js-btn-start">Start</button>
+                            <button class="btn-sty8 btn-scoreboard" data-join="scoreboard">Score Board</button>
+                        </div>                                              
+                    </div>   
+                    <div class="slider-box active">  
+                        <div class="slider-page playcard">
+                            <span class="time">11:20</span>
+                             <button class="btn-comp">
+                                <span class="txt">
+                                    <span>COMP</span>
+                                </span>
+                             </button>
+                            <div class="section playersection">
+                                <span class="tit">
+                                    <span class="tit">
+                                        <span>10</span>
+                                        <span>Players</span>
+                                    </span>
+                                </span>
+                                <ul class="scroll">
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section group">
+                                <span class="tit">Group</span>
+                                <ul>
+                                    <li>                                                
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="btnhalf-wrap">
+                                <li>
+                                    <span class="tit">1st half</span>                                            
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                                <li>
+                                    <span class="tit">2nd half</span>
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                            </ul>
+                            <button class="btn-sty8 js-btn-start">Start</button>
+                            <button class="btn-sty8 btn-scoreboard" data-join="scoreboard">Score Board</button>
+                        </div>                                              
+                    </div>    
+                    <div class="slider-box active">  
+                        <div class="slider-page playcard">
+                            <span class="time">11:20</span>
+                             <button class="btn-comp">
+                                <span class="txt">
+                                    <span>COMP</span>
+                                </span>
+                             </button>
+                            <div class="section playersection">
+                                <span class="tit">
+                                    <span class="tit">
+                                        <span>5</span>
+                                        <span>Players</span>
+                                    </span>
+                                </span>
+                                <ul class="scroll">
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                    <li>
+                                        <button class="btn-qr" data-join="qrbox">
+                                        </button>
+                                        <span>Nakata</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section group">
+                                <span class="tit">Group</span>
+                                <ul>
+                                    <li>                                                
+                                        <span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="btnhalf-wrap">
+                                <li>
+                                    <span class="tit">1st half</span>                                            
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                                <li>
+                                    <span class="tit">2nd half</span>
+                                    <div class="dropdown sty4">
+                                        <span class="pick">
+                                            <span class="txt">course name</span>
+                                            <span class="arrow"></span> 
+                                        </span>
+                                        <div class="dropdown_sub">
+                                            <ul class="inner scroll">
+                                                <li class="on">
+                                                    <span class="txt">course name1</span>
+                                                </li>              
+                                                <li>
+                                                    <span class="txt">course name2</span>
+                                                </li>     
+                                                <li>
+                                                    <span class="txt">course name3</span>
+                                                </li>                                                        
+                                            </ul>              
+                                        </div>                                
+                                    </div> 
+                                </li>
+                            </ul>
+                            <button class="btn-sty8 js-btn-start">Start</button>
+                            <button class="btn-sty8 btn-scoreboard" data-join="scoreboard">Score Board</button>
+                        </div>                                              
+                    </div> 
+                </div>                                                           
+                <div class="arrow">
+                    <button class="prev">                            
+                    </button>                                                
+                    <button class="next">                           
+                    </button>     
+                </div>    
+            </div>                                    
+        </div>   
+
+
+    </section>
+    
+</body>
+</html>

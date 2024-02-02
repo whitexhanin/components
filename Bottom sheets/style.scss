@@ -70,6 +70,7 @@ input:focus:focus-visible {
 :root {
     --vh: 100%;
  }
+ 
  html, body {
     height: 100vh;
     height: var(--vh);
@@ -438,7 +439,7 @@ body {
     align-items:center;
     height:2.8rem;
     padding:0 0.6rem;
-    background: #DEE2E9;;
+    background: #DEE2E9;
     border-radius: 0.4rem;
     font-size: 1.4rem;
     color: #161616;

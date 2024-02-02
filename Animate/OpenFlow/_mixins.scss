@@ -1,0 +1,6 @@
+@mixin select($width) {
+    width: $width;
+    > .pick {
+      width: $width;
+    }
+  }

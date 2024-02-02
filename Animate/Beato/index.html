@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beato</title>
+    <link rel="stylesheet" href="../../common/css/reset.css" />
+    <link rel="stylesheet" href="./_section-beato.css" />
+    <script src="./index_pbl.js"></script>    
+</head>
+<body>
+    <section class="section-beato on">
+        <div class="ymdtime">
+            <span class="ymd">
+                <span class="yy">2023</span>
+                <span class="mm">12</span>
+                <span class="dd">25</span>
+                <span>
+                    (
+                        <span>Fri</span>
+                    )
+                </span>
+            </span>
+            <span class="time">
+                11:23
+            </span>
+        </div>
+        <div class="timer-wrap">
+            <span class="timer" id="stopwatch">
+                00:00:00
+            </span>      
+            <!-- 배토종료 시 state-wrap에 end 클래스 추가 , resetClock 함수 호출 -->
+            <div class="state-wrap start">
+                <span class="txt start">Start Topdressing</span>
+                <span class="txt end">Topdressing Finished</span>
+                <button class="btn" data-join="" data-type="popup2"></button>
+            </div>                                  
+        </div>
+        <div class="svg-trowel">
+            <svg width="186" height="179" viewBox="0 0 186 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="30" cy="156" rx="30" ry="7" fill="#ACAD66"/>
+                <g clip-path="url(#clip0_730_3205)" id="trowel">
+                <path d="M88.4961 111.299L100.102 96.3407L90.1024 88.5701L78.4961 103.528L67.7717 95.2059C65.0157 93.0623 60.9843 93.7243 59.1417 96.6875C45.4567 118.581 37.4882 146.117 47.4724 153.872C57.4567 161.627 82.1339 147.063 99.9291 128.369C102.339 125.847 101.976 121.765 99.2205 119.621L88.4961 111.299Z" fill="#7D726B"/>
+                <path d="M78.5118 103.544L69.0157 115.791C69.0157 115.791 69.5354 108.194 74.622 100.518L78.5276 103.544H78.5118Z" fill="#2A302A"/>
+                <path d="M88.4961 111.299L79 123.546C79 123.546 86.2283 121.15 92.4016 114.325L88.4961 111.299Z" fill="#2A302A"/>
+                <path d="M147.488 24.9072C143.394 21.7233 137.472 22.6059 134.48 26.8459L90.6693 89.0114L99.5197 95.8836L148.827 37.9897C152.197 34.0334 151.583 28.0754 147.488 24.8914V24.9072Z" fill="#BA885F"/>
+                <path d="M92.3386 86.6471C93.0473 85.6383 94.5591 85.654 95.2047 86.7101C96.9685 89.5473 98.8425 94.5596 100.134 95.1743L99.5197 95.8994L90.6693 89.0271L92.3386 86.6628V86.6471Z" fill="#2A302A"/>
+                </g>
+                <g clip-path="url(#clip1_730_3205)" id="G1">
+                <path d="M34.8676 146.268C34.8676 146.268 12.7443 144.768 15.3403 139.61C17.9526 134.448 27.8292 139.837 27.8292 139.837C27.8292 139.837 17.0361 131.086 20.456 127.506C23.8759 123.926 31.0737 136.099 31.0737 136.099C31.0737 136.099 27.1101 126.518 31.2541 124.617C35.398 122.717 38.4471 138.08 34.8487 146.254L34.8676 146.268Z" fill="#0D755F"/>
+                </g>
+                <g clip-path="url(#clip2_730_3205)" id="G2">
+                <path d="M55.2504 160.413C55.2504 160.413 69.1323 161.013 68.5178 165.926C67.9033 170.839 57.1177 166.762 54.8709 165.348C52.6242 163.934 47.9975 160.924 45.7945 159.443L55.2504 160.413Z" fill="#0D755F"/>
+                </g>
+                <g clip-path="url(#clip3_730_3205)" id="G3">
+                <path d="M43.5314 165.317C43.5314 165.317 48.1063 174.788 44.6103 176.139C41.1143 177.49 39.9672 168.837 40.1048 166.832C40.2423 164.828 40.5914 160.664 40.7895 158.664L43.5314 165.317Z" fill="#0D755F"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_730_3205">
+                <rect width="108" height="133" fill="white" transform="translate(43 23)"/>
+                </clipPath>
+                <clipPath id="clip1_730_3205">
+                <rect width="22" height="22" fill="white" transform="translate(13 127.557) rotate(-9.3042)"/>
+                </clipPath>
+                <clipPath id="clip2_730_3205">
+                <rect width="22" height="22" fill="white" transform="translate(74.1091 162.32) rotate(134.137)"/>
+                </clipPath>
+                <clipPath id="clip3_730_3205">
+                <rect width="16.6536" height="16.6536" fill="white" transform="translate(49.0181 178.575) rotate(-164.12)"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </div> 
+    </section>
+</body>
+</html>
