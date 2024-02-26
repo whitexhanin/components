@@ -56,6 +56,9 @@
   align-items: center;
   width: 70px;
   height: 95px;
+}
+.poi-wrap-ab .poi-wrap .sub-poi > li label {
+  text-align: center;
   cursor: pointer;
 }
 .poi-wrap-ab .poi-wrap .sub-poi > li .icon {

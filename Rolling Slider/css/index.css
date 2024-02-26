@@ -110,7 +110,7 @@
   .popup.notice.on {
     display:block;
   }
-  .popup.notice {
+  .popup.notice {    
     display:none;
     width:51.4em;
     height:47.1em;
@@ -120,6 +120,7 @@
     overflow:hidden;
     z-index:2;  
     background: #365DE7;
+    width:500px;
   }
   .popup.notice .header {
     position:relative;
@@ -160,6 +161,7 @@
     transform:translateX(-0px);
     overflow:hidden;
     transition: 0.3s;
+    width:1976px;
   
   }
   .popup.notice .body .notice-list.full {
@@ -169,6 +171,7 @@
     width:477px;/*body width 값*/
     height:100%;  
     padding:0 1.5em 2em;
+    width:494px;
   }
   .popup.notice .body .notice-list .tit-wrap {  
     display:flex;
