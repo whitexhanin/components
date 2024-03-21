@@ -106,7 +106,7 @@ input:focus-visible {
 }
 @media screen and (min-width: 768px) and (max-width: 1330px) {
   .ckbasketpop {
-    top: 20px;
+    top: 40px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
   }
