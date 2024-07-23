@@ -25,7 +25,7 @@ const itemClick = (e) => {
 
     
     if(!target.classList.contains('more')){
-        active.classList.remove('active');
+        active?.classList.remove('active');
         target.classList.add('active');        
         
         if(subList) {
@@ -34,8 +34,13 @@ const itemClick = (e) => {
             moreTxt = targetMore.innerText;  
             iframe.setAttribute('src',`../${moreTxt}/${name}/index.html`);  
         }else{
-            iframe.setAttribute('src',`../${name}/index.html`);  
+            if(name == 'Overview'){                
+                iframe.setAttribute('src',`./${name}.html`);  
+            }else {
+                iframe.setAttribute('src',`../${name}/index.html`);  
+            }
             openReset();            
+            
         }
     }    
     

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Move updown button</title>
+    <link rel="stylesheet" href="./popup10.css">
+    <script src="./ckAll.js"></script>
+    <script src="./dimPopup.js"></script>    
+    <script src="./textArea.js"></script>      
+    <script src="./tabArea.js"></script>    
+    <script src="./updownSec.js"></script>
+</head>
+<body>
+    <div class="popup p10  updownsec on"  data-pop="p10">    
+        <div class="head-area">
+            <h5 class="tit-h5">
+                점검리스트
+            </h5> 
+            <span class="tagrect t1">작성중</span>
+            <button class="btn2 btn-print mglauto"></button>           
+            <button class="btn1 btn-cancle mgl10">취소</button>                            
+            <button class="btn3">저장</button>
+        </div>    
+        <div class="page-info h72">    
+            <div class="cellbox w110">
+                <span class="st">작성일</span>
+                <span class="sd-wrap">
+                    <span class="sd">2023-02-01(수)</span>
+                </span>
+            </div>      
+            <div class="cellbox rowwrap">
+                <span class="st wp100">작성자정보</span>
+                <span class="sd-wrap column col1 w70">
+                    <span class="st t12">작성자</span>
+                    <span class="sd">김협소</span>
+                </span>
+                <span class="sd-wrap column col1 w100">
+                    <span class="st t12">직책</span>
+                    <span class="sd">현장소장</span>
+                </span>
+            </div>      
+            <div class="cellbox w100 mglauto">
+                <span class="st">미점검 항목</span>
+                <span class="sd-wrap">
+                    <span class="sd">5</span>
+                </span>
+            </div>   
+            <div class="cellbox w100">
+                <span class="st">총 항목</span>
+                <span class="sd-wrap">
+                    <span class="sd">9</span>
+                </span>
+            </div>                                                         
+        </div>            
+        <div class="fitbtn-area">   
+            <button class="btn1">전체선택</button>
+            <button class="btn1">선택삭제</button>                        
+            <button class="btn2 btn-up mgr-6"></button>
+            <button class="btn2 btn-down mgrauto"></button>
+            <button class="btn6">추가위험발굴 생성</button>                                         
+            <button class="btn6">직접입력 생성</button>                                         
+            <button class="btn1">점검취소</button>     
+            <button class="btn3">점검완료</button>
+            <button class="btn14 blue">N/A</button>
+            <button class="btn14 red">점검불량</button>
+            <button class="btn14 green">점검양호</button>
+        </div>   
+        <ul class="check-list scroll  updownlist">
+            <!-- 점검일지 -->
+            <li>
+                <div class="tit-wrap">
+                    <span class="ck">
+                        <input type="checkbox" name="" id=""  class="ckbox">
+                    </span>  
+                    <span class="num mgl6">01.</span>
+                    <span class="tit">점검일지</span>
+                </div>                
+                <ul class="list">
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">위치</span>
+                            <button class="btn9 btn-pop3" data-pop="p3">
+                                <span class="icon"></span>
+                                선택
+                            </button>
+                        </span>                        
+                        <span class="set">
+                            <span class="st">출처</span>
+                            <span class="sd tagrect2 t4">직접생성</span>
+                        </span>    
+                        <span class="set">
+                            <span class="st">발행자</span>
+                            <span class="sd">박총괄</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">업체</span>
+                            <button class="btn9 btn-pop3" data-pop="p1">
+                                <span class="icon"></span>
+                                선택
+                            </button>
+                        </span>     
+                        <span class="set">
+                            <span class="st">작업공종</span>
+                            <span class="sd">콘크리트</span>
+                        </span>   
+                        <span class="set">
+                            <span class="st">장비정보</span>
+                            <button class="btn9 btn-pop3" data-pop="p4">
+                                <span class="icon"></span>
+                                선택
+                            </button>
+                        </span>          
+                    </li>
+                    <li>
+                        <div class="textarea-wrap readonly">
+                            <span class="st">위험요인</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>   
+                        <div class="textarea-wrap disabled">
+                            <span class="st">개선대책</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1"></textarea>                                
+                        </div>   
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w445">
+                            <span class="st">점검내용</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>      
+                        <div class="btnfile-area">                                        
+                            <label for="file1" class="btn6">이미지첨부</label>                            
+                            <input type="file" id="file1">
+                        </div>
+                        <button class="btn1">선택삭제</button>       
+                        <ul class="preview">
+                            <li>
+                                <span class="ck">
+                                    <input type="checkbox" name="" id=""  class="ckbox">
+                                </span>  
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                            
+                        </ul>              
+                    </li>
+                </ul>
+            </li>
+            <!-- 추가위험발굴지시 -->
+            <li>
+                <div class="tit-wrap">
+                    <span class="ck">
+                        <input type="checkbox" name="" id=""  class="ckbox">
+                    </span>  
+                    <span class="num mgl6">01.</span>
+                    <span class="tit">추가위험발굴지시</span>
+                </div>                
+                <ul class="list">
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">위치</span>
+                            <button class="btn10 h20 disabled">
+                                101동-3호
+                            </button>
+                        </span>       
+                        <span class="set">
+                            <span class="st">상태</span>
+                            <span class="sd">지시</span>
+                        </span>                  
+                        <span class="set">
+                            <span class="st">출처</span>
+                            <span class="sd tagrect2 t2">추가위험발굴지시</span>
+                        </span>    
+                        <span class="set">
+                            <span class="st">조치기간</span>
+                            <span class="sd">2023-02-23 ~ 2023-02-24</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">발행자</span>
+                            <span class="sd">박총괄</span>
+                        </span>                                 
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">업체</span>
+                            <button class="btn10  h20 disabled">
+                                원영건업(주)
+                            </button>
+                        </span>    
+                        <span class="set">
+                            <span class="st">작업공종</span>
+                            <span class="sd">콘크리트</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">중공종</span>
+                            <span class="sd">할석</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">세부항목</span>
+                            <span class="sd">B/T 비계 및 작업발판</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">위험등급</span>
+                            <span class="sd">
+                                <span class="tagrd t1">상</span>
+                            </span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">재해요인</span>
+                            <span class="sd">전도</span>
+                        </span>  
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">장비정보</span>
+                            <button class="btn10  h20 disabled">
+                                타워크레인-200m(붐) : 0.5대
+                            </button>
+                            <button class="btn10  h20 disabled">
+                                고소작업대-시저형 : 1대
+                            </button>
+                        </span>                            
+                    </li>
+                    <li>
+                        <div class="textarea-wrap readonly">
+                            <span class="st">위험요인</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">믹스트럭 후진 중 펌프카와 충돌 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra</textarea>                                
+                        </div>   
+                        <div class="textarea-wrap readonly">
+                            <span class="st">개선대책</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1">충돌방지 스토퍼 설치 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum</textarea>                                
+                        </div>   
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w680 readonly">
+                            <span class="st">조치요구사항</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">신호수 배치 필요 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</textarea>                                
+                        </div>                                  
+                        <ul class="preview">
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>   
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                           
+                        </ul>              
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w445">
+                            <span class="st">조치내용</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>      
+                        <div class="btnfile-area">                                        
+                            <label for="file1" class="btn6">이미지첨부</label>                            
+                            <input type="file" id="file1">
+                        </div>
+                        <button class="btn1">선택삭제</button>       
+                        <ul class="preview">
+                            <li>
+                                <span class="ck">
+                                    <input type="checkbox" name="" id=""  class="ckbox">
+                                </span>  
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                            
+                        </ul>              
+                    </li>
+                </ul>
+            </li>
+            <!-- 부적합보고서 -->
+            <li>
+                <div class="tit-wrap">
+                    <span class="ck">
+                        <input type="checkbox" name="" id=""  class="ckbox">
+                    </span>  
+                    <span class="num mgl6">02.</span>
+                    <span class="tit">부적합보고서</span>
+                </div>                
+                <ul class="list">
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">위치</span>
+                            <button class="btn10 h20 disabled">
+                                103동-출입구
+                            </button>
+                        </span>       
+                        <span class="set">
+                            <span class="st">상태</span>
+                            <span class="sd">지시</span>
+                        </span>                  
+                        <span class="set">
+                            <span class="st">출처</span>
+                            <span class="sd tagrect2 t3">부적합보고서</span>
+                        </span>    
+                        <span class="set">
+                            <span class="st">조치기간</span>
+                            <span class="sd">2023-02-23 ~ 2023-02-24</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">발행자</span>
+                            <span class="sd">박총괄</span>
+                        </span>                                 
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">업체</span>
+                            <button class="btn10  h20 disabled">
+                                원영건업(주)
+                            </button>
+                        </span>    
+                        <span class="set">
+                            <span class="st">작업공종</span>
+                            <span class="sd">콘크리트</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">중공종</span>
+                            <span class="sd">할석</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">세부항목</span>
+                            <span class="sd">B/T 비계 및 작업발판</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">위험등급</span>
+                            <span class="sd">
+                                <span class="tagrd t1">상</span>
+                            </span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">재해요인</span>
+                            <span class="sd">전도</span>
+                        </span>  
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">장비정보</span>
+                            <button class="btn10  h20 disabled">
+                                타워크레인-200m(붐) : 0.5대
+                            </button>
+                            <button class="btn10  h20 disabled">
+                                고소작업대-시저형 : 1대
+                            </button>
+                        </span>                            
+                    </li>
+                    <li>
+                        <div class="textarea-wrap readonly">
+                            <span class="st">위험요인</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">믹스트럭 후진 중 펌프카와 충돌</textarea>                                
+                        </div>   
+                        <div class="textarea-wrap readonly">
+                            <span class="st">개선대책</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1">충돌방지 스토퍼 설치 consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum</textarea>                                
+                        </div>   
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w680 readonly">
+                            <span class="st">조치요구사항</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">신호수 배치 필요 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus</textarea>                                
+                        </div>                                  
+                        <ul class="preview">
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>   
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                           
+                        </ul>              
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w680 h48 readonly">
+                            <span class="st">부적합사항 및 조치요구사항</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">신호수 안전장비 미착용, 장비 착용 철저 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur</textarea>                                
+                        </div>                                  
+                        <ul class="preview">
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>   
+                            <li>                                
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>  
+                            <li>                                 
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                           
+                        </ul>              
+                    </li>
+                    <li>
+                        <div class="textarea-wrap w445">
+                            <span class="st">조치내용</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>      
+                        <div class="btnfile-area">                                        
+                            <label for="file1" class="btn6">이미지첨부</label>                            
+                            <input type="file" id="file1">
+                        </div>
+                        <button class="btn1">선택삭제</button>       
+                        <ul class="preview">
+                            <li>
+                                <span class="ck">
+                                    <input type="checkbox" name="" id=""  class="ckbox">
+                                </span>  
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                            
+                        </ul>              
+                    </li>
+                    <li>
+                        <div class="textarea-wrap">
+                            <span class="st">재발방지대책</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>                                           
+                    </li>
+                </ul>
+            </li>
+            <!-- 당일위험요인 -->
+            <li>
+                <div class="tit-wrap">
+                    <span class="ck">
+                        <input type="checkbox" name="" id=""  class="ckbox">
+                    </span>  
+                    <span class="num mgl6">03.</span>
+                    <span class="tit">당일위험요인</span>
+                </div>                
+                <ul class="list">
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">위치</span>
+                            <button class="btn10 h20 disabled">
+                                101동-3호
+                            </button>
+                        </span>       
+                        <span class="set">
+                            <span class="st">출처</span>
+                            <span class="sd tagrect2 t1">당일위험요인</span>
+                        </span>    
+                        <span class="set">
+                            <span class="st">조치기간</span>
+                            <span class="sd">2023-02-23 ~ 2023-02-24</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">발행자</span>
+                            <span class="sd">박총괄</span>
+                        </span>                                 
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">업체</span>
+                            <button class="btn10  h20 disabled">
+                                원영건업(주)
+                            </button>
+                        </span>    
+                        <span class="set">
+                            <span class="st">작업공종</span>
+                            <span class="sd">콘크리트</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">중공종</span>
+                            <span class="sd">할석</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">세부항목</span>
+                            <span class="sd">B/T 비계 및 작업발판</span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">위험등급</span>
+                            <span class="sd">
+                                <span class="tagrd t1">상</span>
+                            </span>
+                        </span>  
+                        <span class="set">
+                            <span class="st">재해요인</span>
+                            <span class="sd">전도</span>
+                        </span>  
+                    </li>
+                    <li class="gap20">
+                        <span class="set">
+                            <span class="st">장비정보</span>
+                            <button class="btn10  h20 disabled">
+                                타워크레인-200m(붐) : 0.5대
+                            </button>
+                            <button class="btn10  h20 disabled">
+                                고소작업대-시저형 : 1대
+                            </button>
+                        </span>                            
+                    </li>
+                    <li>
+                        <div class="textarea-wrap readonly">
+                            <span class="st">위험요인</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력">믹스트럭 후진 중 펌프카와 충돌 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra</textarea>                                
+                        </div>   
+                        <div class="textarea-wrap readonly">
+                            <span class="st">개선대책</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1">충돌방지 스토퍼 설치 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum</textarea>                                
+                        </div>   
+                    </li>                    
+                    <li>
+                        <div class="textarea-wrap w445">
+                            <span class="st">점검내용</span>
+                            <textarea name="" id="" class="txtarea t3" rows="1" placeholder="입력"></textarea>                                
+                        </div>      
+                        <div class="btnfile-area">                                        
+                            <label for="file1" class="btn6">이미지첨부</label>                            
+                            <input type="file" id="file1">
+                        </div>
+                        <button class="btn1">선택삭제</button>       
+                        <ul class="preview">
+                            <li>
+                                <span class="ck">
+                                    <input type="checkbox" name="" id=""  class="ckbox">
+                                </span>  
+                                <div class="img">
+                                    <img src="./img/test/img.png" alt="">
+                                </div>    
+                            </li>                            
+                        </ul>              
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <button class="btn-close2"></button>
+    </div>    
+    <div class="inpopup ckbasketpop inpop1 updownsec"  data-pop="p3">
+        <h5 class="tit-h5">위치 추가</h5>
+        <div class="add-info">
+            <span class="add titsty">
+                <span class="st">중공종</span>
+                <span class="sd">가나다라마바사</span>
+            </span>
+            <span class="add titsty">
+                <span class="st">세부항목</span>
+                <span class="sd">가나다라마바사</span>
+            </span>
+            <div class="input-search mglauto"><input type="search"  placeholder="입력"><button></button></div>                
+        </div>
+        <div class="add-list">
+            <div class="div-selected">
+                <button class="btn2 btn-up"></button>
+                <button class="btn2 btn-down"></button>
+                <button class="btn1">선택삭제</button>
+                <ul class="selted scroll updownlist">
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">1.101동-2층</label>                        
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">2.101동-2층</label>                        
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">3.101동-2층</label>                        
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">4.101동-2층</label>                        
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">5.101동-2층</label>                        
+                    </li>
+                </ul>
+            </div>
+            <div class="list n1 ones_div">
+                <div class="input1"><input type="text" placeholder="직접입력 추가"><button></button></div>
+                <ul class="selt poplist scroll">
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-all"  class="ckbox ck-all">
+                        </span>                        
+                        <label for="ck2-all" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장1</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-2"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-2" class="sd">현장1</label>   
+                    </li>
+                </ul>
+            </div>
+            <div class="list n2 on ones_div">
+                <div class="input1 disabled"><input type="text" placeholder="직접입력 추가"><button></button></div>
+                <ul class="selt poplist scroll">
+                    <li class="empty">하위목록</li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck3-all"  class="ckbox ck-all">
+                        </span>                        
+                        <label for="ck3-all" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck3-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck3-1" class="sd">현장1</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck3-2"  class="ckbox">
+                        </span>                        
+                        <label for="ck3-2" class="sd">현장1</label>   
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-area">
+            <button class="btn1 btn-cancle3">취소</button>
+            <button class="btn3">저장</button>
+        </div>
+        <button class="btn-close3"></button>
+    </div>       
+    <div class="inpopup ckbasketpop inpop2 updownsec"  data-pop="p4">
+        <h5 class="tit-h5">장비 추가</h5>
+        <div class="add-info">
+            <span class="add titsty">
+                <span class="st">중공종</span>
+                <span class="sd">가나다라마바사</span>
+            </span>
+            <span class="add titsty">
+                <span class="st">세부항목</span>
+                <span class="sd">가나다라마바사</span>
+            </span>
+            <div class="input-search mglauto"><input type="search"  placeholder="입력"><button></button></div>                
+        </div>
+        <div class="add-list">
+            <div class="div-selected">
+                <button class="btn2 btn-up"></button>
+                <button class="btn2 btn-down"></button>
+                <button class="btn1">선택삭제</button>
+                <ul class="selted scroll updownlist">
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">1천공기-크롤러드 릴</label>   
+                        <span class="sd-num">
+                            <input type="number" name="" id="unit1">
+                        <label for="unit1" class="unit">대</label>
+                        </span>                     
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">2천공기-크롤러드 릴</label>   
+                        <span class="sd-num">
+                            <input type="number" name="" id="unit1">
+                        <label for="unit1" class="unit">대</label>
+                        </span>                     
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">3천공기-크롤러드 릴</label>   
+                        <span class="sd-num">
+                            <input type="number" name="" id="unit1">
+                        <label for="unit1" class="unit">대</label>
+                        </span>                     
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck1"  class="ckbox">
+                        </span>
+                        <label for="ck1" class="sd">4천공기-크롤러드 릴</label>   
+                        <span class="sd-num">
+                            <input type="number" name="" id="unit1">
+                        <label for="unit1" class="unit">대</label>
+                        </span>                     
+                    </li>
+                </ul>
+            </div>
+            <div class="list n1">
+                <div class="input1"><input type="text" placeholder="직접입력 추가"><button></button></div>
+                <ul class="selt scroll">
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2"  class="ckbox">
+                        </span>                        
+                        <label for="ck2" class="sd">현장전체</label>   
+                    </li>
+                </ul>
+            </div>
+            <div class="list n2 on">
+                <div class="input1 disabled"><input type="text" placeholder="직접입력 추가"><button></button></div>
+                <ul class="selt scroll">
+                    <li class="li-unit">
+                        <input type="number" name="" id="unit2">
+                        <label for="unit2" class="unit">m/붐</label>
+                    </li>                    
+
+                    <!-- <li class="empty">하위목록</li> -->
+                    <!-- <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li>
+                    <li>
+                        <span class="ck">
+                            <input type="checkbox" name="" id="ck2-1"  class="ckbox">
+                        </span>                        
+                        <label for="ck2-1" class="sd">현장전체</label>   
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="btn-area">
+            <button class="btn1 btn-cancle3">취소</button>
+            <button class="btn3">저장</button>
+        </div>
+        <button class="btn-close3"></button>
+    </div> 
+    <div class="inpopup ckbasketpop p1"  data-pop="p1">
+        <h5 class="tit-h5">협력업체 정보</h5>
+        <div class="std-wrap">
+            <span class="st">업체명</span>                                                         
+            <div class="sd">
+                <div class="input-search"><input type="search"  placeholder="입력"><button></button></div>                
+            </div>                            
+        </div>        
+        <div class="partners-list poplist">
+            <h6 class="tit-h6">업체목록</h6>
+            <div class="head">
+                <span class="st">업체명</span>
+                <span class="ck">
+                    <input type="checkbox" name="" id="" class="ckbox ck-all">
+                </span>
+                <span class="st">업체공종</span>
+            </div>
+            <ul class="body">
+                <li class="li-wrap">
+                    <span class="sd">
+                        <span class="els" title="아이앤티엔지니어링(주)">아이앤티엔지니어링(주)</span>
+                    </span>
+                    <ul class="ul-side">
+                        <li>
+                            <span class="ck">
+                                <input type="checkbox" name="" id=""  class="ckbox">
+                            </span>
+                            <span class="sd">
+                                <span class="els" title="거푸집공사">거푸집공사</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="ck">
+                                <input type="checkbox" name="" id=""  class="ckbox">
+                            </span>
+                            <span class="sd">
+                                <span class="els" title="철근공사">철근공사</span>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="li-wrap">
+                    <span class="sd">
+                        <span class="els"  title="(주)형제기초">(주)형제기초</span>
+                    </span>
+                    <ul class="ul-side">
+                        <li>
+                            <span class="ck">
+                                <input type="checkbox" name="" id=""  class="ckbox">
+                            </span>
+                            <span class="sd">
+                                <span class="els" title="파일공사">파일공사</span>
+                            </span>
+                        </li>                        
+                    </ul>
+                </li>
+            </ul>
+        </div>        
+        <div class="paging-area">
+            <button class="btn-prev"></button>
+            <div class="page">
+                <button class="on">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>...</button>
+                <button>30</button>
+            </div>
+            <button class="btn-next"></button>
+        </div>
+        <div class="btn-area">
+            <button class="btn1 btn-cancle">취소</button>
+            <button class="btn3">적용</button>
+        </div>
+        <button class="btn-close3"></button>
+    </div>
+    <div class="dim on"></div>           
+    <div class="dim3"></div>               
+    <script>
+        txtArea = document.querySelectorAll('.popup[data-pop=p10] .txtarea');
+                        
+            txtArea.forEach(element => {                
+                textAreaHeight(element);
+            });
+    </script>
+</body>
+</html>
