@@ -33,7 +33,7 @@ html {
   font-family: 'NotoSansCJKkr-Regular', sans-serif;
 }
 body {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   /* background: #0C0F22; */
 }

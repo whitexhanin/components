@@ -9,7 +9,7 @@
     body {
         
     }
-    .container {
+    .overviewcontainer {
         display: flex;
         flex-direction: column;
         margin: auto;
@@ -64,7 +64,7 @@
 
 </style>
 <body>
-    <div class="container">
+    <div class="overviewcontainer">
         <h1>Overview</h1>
         <h2>Animate</h2>
         <ul>
@@ -337,5 +337,20 @@
             </li>
         </ul>
     </div>
+    <!-- <script>
+
+        const liClickEvent = (e) => {
+            let target = e.currentTarget;
+            let targetName = target.querySelector('h3');
+        }
+
+        let li = document.querySelectorAll('li');
+        li.forEach(element => {
+            element.addEventListener('click',liClickEvent);            
+        });
+
+        console.log(document.querySelector('iframe'));
+       
+    </script> -->
 </body>
 </html>

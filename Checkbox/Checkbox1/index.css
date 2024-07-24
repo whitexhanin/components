@@ -1,3 +1,9 @@
+body {
+  display:flex;  
+}
+.checkbox-list {
+  margin:auto;
+}
 .checkbox-list {
   display: block;
   width: 286px;

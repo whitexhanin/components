@@ -4,6 +4,7 @@
   align-items: center;
   background: gray;
   width: 500px;
+  margin:auto;
 }
 .page-area .page-num {
   padding: 0 13px;

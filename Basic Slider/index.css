@@ -1,6 +1,7 @@
 .slider-wrap {
   position: relative;
   width: 80%;
+  margin:auto;
 }
 .slider-wrap .slider-body {
   position: relative;

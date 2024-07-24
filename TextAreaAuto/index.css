@@ -1,3 +1,10 @@
+body {
+  display:flex;
+  height:100vh;
+}
+.chat-area {
+  margin:auto;
+}
 .txtarea {
   border: none;
   width: 100%;
@@ -42,7 +49,7 @@
 }
 
 .chat-area {
-  margin: 0 10px;
+  /* margin: 0 10px; */
   display: flex;
   flex-direction: column;
   padding: 5px 0 3px;
@@ -54,7 +61,7 @@
   margin: 0;
 }
 .chat-area.mgt10 {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .chat-area li {
   display: flex;

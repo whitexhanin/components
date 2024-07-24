@@ -13,8 +13,8 @@ window.addEventListener('load',function(){
     
 })
 
-const itemClick = (e) => {
-    let target = e.currentTarget;
+const itemClick = (e) => {    
+    let target = e.type === 'click' ? e.currentTarget : e    
     let name = target.innerText;
     let iframe = document.querySelector('iframe');
     let active = document.querySelector('.itemlist button.active');    
@@ -22,6 +22,7 @@ const itemClick = (e) => {
     let targetLi;
     let targetMore;
     let moreTxt;    
+    let overviewContainer = document.querySelector('.overviewcontainer');     
 
     
     if(!target.classList.contains('more')){
@@ -34,19 +35,26 @@ const itemClick = (e) => {
             moreTxt = targetMore.innerText;  
             iframe.setAttribute('src',`../${moreTxt}/${name}/index.html`);  
         }else{
-            if(name == 'Overview'){                
-                iframe.setAttribute('src',`./${name}.html`);  
-            }else {
-                iframe.setAttribute('src',`../${name}/index.html`);  
+            if(name !== 'Overview'){                
+                iframe.setAttribute('src',`../${name}/index.html`);                  
             }
-            openReset();            
-            
+
+            openReset();           
+        }
+           
+
+        if(name == 'Overview'){
+            iframe.classList.remove('on');
+            overviewContainer.classList.add('on');
+        }else {
+            overviewContainer.classList.remove('on');
+            iframe.classList.add('on');            
         }
     }    
     
  }
  const moreClick = (e) => {    
-    let target = e.currentTarget;    
+    let target = e.type === 'click' ? e.currentTarget : e       
     let subList = target.closest('li').querySelector('.sublist');
     let subLength = subList.childElementCount;
     
@@ -69,5 +77,4 @@ const itemClick = (e) => {
         open.classList.remove('open');
         openSub.style.height = '0';   
     }
-
- }
+ } 

@@ -1,8 +1,12 @@
 .container {
-  background: #000;
+  background: #000;    
 }
-
+body {
+  display:flex;
+  height:100vh;
+}
 .hand {
+  margin:auto;
   width: 9rem;
   height: 10rem;
 }

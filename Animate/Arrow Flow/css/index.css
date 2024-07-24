@@ -1,5 +1,6 @@
 .container {
-  background: #000;
+  background: #000;  
+  display: flex;  
 }
 /*열차 방향 화살표 애니메이션*/
 .center{
@@ -7,6 +8,7 @@
   align-items:center;
   justify-content: center;
   height:50px;
+  margin:auto;
 }
 .center .arrow {
   position:absolute;

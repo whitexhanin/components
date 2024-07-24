@@ -2,9 +2,13 @@
   background: #000;
 }
 .center-box {
+  margin:auto;
+  align-items:center;
+}
+.center-box {
   position:relative;
   display:flex;    
-  align-items:flex-end;
+  /* align-items:flex-end; */
   width:700px;    
   height:100%;
   padding-bottom:2.8em;

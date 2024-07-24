@@ -1,7 +1,9 @@
 .poi-wrap-ab {
-  position: absolute;
+  /* position: absolute;
   top: 20px;
-  right: 30px;
+  right: 30px; */
+  display:flex;
+  justify-content: center;
 }
 .poi-wrap-ab .poi-wrap {
   position: relative;

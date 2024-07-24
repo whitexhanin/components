@@ -10,12 +10,79 @@
     <link rel="stylesheet" href="./style.css">    
     <script src="./index.js"></script>
 </head>
+<style>
+    iframe, .overviewcontainer {
+        display:none;
+    }
+
+    body {
+        
+    }
+    iframe.on {
+        display:block;
+    }
+    .overviewcontainer.on {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: fit-content;
+        
+    }
+    .overviewcontainer h1 {
+        font-size:96px;               
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em; 
+    }
+    .overviewcontainer h2 {
+        font-size:57px;
+        padding-left:24px;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+    }
+    .overviewcontainer ul {
+        display:grid;                
+        width: 100%;
+        grid-template-columns:  repeat(auto-fill, minmax(300px,1fr));
+        grid-auto-rows:340px;     
+        list-style: none;   
+        padding:0;
+        gap:10px;
+    }
+    .overviewcontainer ul li {        
+        font-size: 24px;
+        border-radius:5px;
+        background-color:rgb(248, 241, 246);
+    }
+    .overviewcontainer ul li:hover {
+        background-color:rgb(137, 132, 192);
+    }
+    .overviewcontainer ul li:hover .img {
+        background-color:bisque;
+    }
+    .overviewcontainer ul li .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        width:100%;
+        height:200px;        
+        padding:10px 0;
+        background-color:beige;
+    }
+    .overviewcontainer ul li .img  img {        
+        max-width:100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    .overviewcontainer ul li .title {
+        margin:24px;
+    }
+</style>
 <body>   
     <div class="container">
         <nav class="side_sheets">
             <ul class="itemlist">
-                <li>
-                    <button>Overview</button>
+                <li class="overview">
+                    <button class="active">Overview</button>
                 </li>
                 <li>
                     <button class="more">Animate</button>
@@ -24,7 +91,7 @@
                             <button>Arrow Flow</button>
                         </li>
                         <li>
-                            <button>Arrow direction</button>
+                            <button>Arrow Direction</button>
                         </li>
                         <li>
                             <button>Beato</button>
@@ -71,10 +138,10 @@
                     <button class="more">Checkbox</button>
                     <ul class="sublist">
                         <li>
-                            <button>styleNo1</button>
+                            <button>Checkbox1</button>
                         </li>
                         <li>
-                            <button>styleNo2</button>
+                            <button>Checkbox2</button>
                         </li>                                            
                     </ul>
                 </li>
@@ -131,17 +198,323 @@
                 <li>
                     <button>TouchMove</button>
                 </li>
-                <!-- <li>
+                <li>
                     <button>GNB</button>
-                </li> -->
+                </li>
                 <li>
                     <button>InputFilePreview</button>
+                </li>
+                <li>
+                    <button>ItemMove</button>
                 </li>
             </ul>
         </nav>    
         <div class="content">
             <iframe src="./overview.html" frameborder="0"></iframe>
-        </div>
-    </div>     
+            <div class="overviewcontainer on">
+                <h1>Overview</h1>
+                <h2>Animate</h2>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="../image/arrowdirection.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Arrow Direction</h3>
+                            <p></p>
+                        </div>            
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/arrowflow.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Arrow Flow</h3>
+                            <p></p>
+                        </div>    
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/beato.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Beato</h3>
+                            <p></p>
+                        </div>   
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/bugi.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Bugi</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/car.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Car</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/cardgame.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Card Game</h3>
+                            <p></p>
+                        </div>
+                    </li>        
+                    <li>
+                        <div class="img">
+                            <img src="../image/openflow.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>OpenFlow</h3>
+                            <p></p>
+                        </div>
+                    </li>        
+                    <li>
+                        <div class="img">
+                            <img src="../image/touch.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Touch</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/trainflow.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Train Flow</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/warning.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Warning</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/weather.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Weather</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Input</h2>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="../image/textareaauto.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>TextAreaAuto</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/checkbox.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Checkbox1</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/switch.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Switch</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/select.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Select Menus</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/login.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Login_TextInput</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Slider</h2>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="../image/basicslider.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Basic Slider</h3>
+                            <p></p>
+                        </div>
+                    </li>            
+                    <li>
+                        <div class="img">
+                            <img src="../image/rollingslider.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Rolling Slider</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/rollinglist.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Rolling List</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+                <h2>DragDrop</h2>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="../image/touchmove.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>TouchMove</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/itemmove.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>ItemMove</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Navigation</h2>
+                <ul>
+                    <li>
+                        <div class="img">
+                            <img src="../image/gnb.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>GNB</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/sidesheets.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Side Sheets</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img src="../image/bottomsheets.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Bottom sheets</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>    
+                <h2>Popup</h2>
+                <ul>
+                    <!-- <li>
+                        <div class="img">
+                            <img src="../image/fullmode.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Full Mode</h3>
+                            <p></p>
+                        </div>
+                    </li> -->
+                    <!-- <li>
+                        <div class="img">
+                            <img src="../image/loader.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Loader</h3>
+                            <p></p>
+                        </div>
+                    </li>         -->
+                    <!-- <li>
+                        <div class="img">
+                            <img src="../image/pagenation.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Pagenation</h3>
+                            <p></p>
+                        </div>
+                    </li> -->
+                    <li>
+                        <div class="img">
+                            <img src="../image/toastpopup.jpg" alt="" />
+                        </div>
+                        <div class="title">
+                            <h3>Toast Popup</h3>
+                            <p></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </div> 
+    <script>
+
+        const liClickEvent = (e) => {
+            let target = e.currentTarget;
+            let targetName = target.querySelector('h3').innerText;
+
+            let itemlistButton = document.querySelectorAll('.itemlist button');
+            console.log([...itemlistButton]);
+            
+            let result = [...itemlistButton].filter((button) => button.innerText === targetName);
+            let matching = result[0]
+            
+            console.log(matching.closest('.sublist'));
+            itemClick(matching);        
+
+            if(matching.closest('.sublist')){
+                let more = matching.closest('.sublist').previousElementSibling;
+                moreClick(more);
+            }
+
+                
+        }
+
+        let li = document.querySelectorAll('.overviewcontainer li');
+
+        li.forEach(element => {
+            element.addEventListener('click',liClickEvent);            
+        });
+       
+    </script> 
 </body>
 </html>
